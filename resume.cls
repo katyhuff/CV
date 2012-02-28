@@ -774,7 +774,7 @@
 \topmargin 0pt
 \headheight 0pt
 \headsep 0pt
-\textheight 9in
+\textheight 260mm
 \parindent 0pt
 \topmargin 0in
 \oddsidemargin 0pt
@@ -818,8 +818,8 @@
 \itemsep=0cm
 \parsep=0cm
 \topmargin -12mm
-%\textheight 265mm
-\textheight 275mm
+\textheight 260mm
+%\textheight 275mm
 
 \newenvironment{list1}{
   \begin{list}{\ding{113}}{%
@@ -841,4 +841,48 @@
 \newcommand{\mysubheadingstyle}{\sl}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% From T. Pavlic
+
+\usepackage[shortlabels]{enumitem}
+
+% Simpler bibsections for CV sections
+% (thanks to natbib for inspiration)
+%
+% * For lists of references with hanging indents and no numbers:
+%
+%   \begin{bibsection}
+%       \item ...
+%   \end{bibsection}
+%
+% * For numbered lists of references (with hanging indents):
+%
+%   \begin{bibenum}
+%       \item ...
+%   \end{bibenum}
+%
+%   Note that bibenum numbers continuously throughout. To reset the
+%   counter, use
+%
+%   \restartlist{bibenum}
+%
+%   at the place where you want the numbering to reset.
+
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibsection}{itemize}{3}
+\setlist[bibsection]{label=,leftmargin=\bibhang}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{resume,label=[\arabic*],leftmargin={\bibhang\widthof{\ \ \ }}}
+\setlist*[bibsection,bibenum]{%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\let\oldendbibenum\endbibenum
+\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+\let\oldendbibsection\endbibsection
+\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
+\makeatother
 

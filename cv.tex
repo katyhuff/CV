@@ -5,49 +5,6 @@
 
 \newcommand{\Cyclus}{\textsc{Cyclus }}
 
-\usepackage[shortlabels]{enumitem}
-
-% Simpler bibsections for CV sections
-% (thanks to natbib for inspiration)
-%
-% * For lists of references with hanging indents and no numbers:
-%
-%   \begin{bibsection}
-%       \item ...
-%   \end{bibsection}
-%
-% * For numbered lists of references (with hanging indents):
-%
-%   \begin{bibenum}
-%       \item ...
-%   \end{bibenum}
-%
-%   Note that bibenum numbers continuously throughout. To reset the
-%   counter, use
-%
-%   \restartlist{bibenum}
-%
-%   at the place where you want the numbering to reset.
-
-\makeatletter
-\newlength{\bibhang}
-\setlength{\bibhang}{1em}
-\newlength{\bibsep}
- {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
-\newlist{bibsection}{itemize}{3}
-\setlist[bibsection]{label=,leftmargin=\bibhang}
-\newlist{bibenum}{enumerate}{3}
-\setlist[bibenum]{resume,label=[\arabic*],leftmargin={\bibhang\widthof{\ \ \ }}}
-\setlist*[bibsection,bibenum]{%
-        itemindent=-\bibhang,
-        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
-        topsep=0pt}
-\let\oldendbibenum\endbibenum
-\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
-\let\oldendbibsection\endbibsection
-\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
-\makeatother
-
 %______________________________________________________________________________________________________________________
 \begin{document}
 \name{\Large Kathryn D. Huff}
@@ -78,13 +35,13 @@
     \section{\mysidestyle Education}
 
     \textbf{University of Wisconsin}, Madison, WI \vspace{1mm}\\\vspace{1mm}%
-    \textsl{Doctor of Philosophy} \textsc{Nuclear Engineering}\hfill \textbf{ August 2008 -- present}\vspace{-3mm}\\\vspace{-1mm}%
+    \textsl{Doctor of Philosophy} \textsc{Nuclear Engineering}\hfill \textbf{ Aug 2008 -- present}\vspace{-3mm}\\\vspace{-1mm}%
     \begin{list2}
         \item Expected graduation date: August 2012
         \item Advisor:  Professor Paul P.H. Wilson                
     \end{list2}
 		\textbf{University of Chicago}, Chicago, IL \vspace{1mm}\\\vspace{1mm}%
-		\textsl{Bachelor of Arts and Sciences}\textsc{ Physics} \hfill \textbf{August 2004 -- June 2008}\vspace{-3mm}\\\vspace{-1mm}%
+		\textsl{Bachelor of Arts and Sciences}\textsc{ Physics} \hfill \textbf{Aug 2004 -- June 2008}\vspace{-3mm}\\\vspace{-1mm}%
 %		\begin{list2}
 %				\item Undergraduate Thesis: Celestial Gain Calibrations of QUIET Telescope Polarimeters
 %		\end{list2}\vspace{-1.5mm}
@@ -156,7 +113,6 @@
       \item Huff, K., Dixon, B., Braase, L. ``Next Generation Fuel Cycle Simulator Functions and Requirements Document.'' 
         \emph{Idaho National Laboratory}(FCRD-SYSA-2010-000110). July 2010. 
         % [paper]
-      \pagebreak 
       \item Huff, K. ``Celestial Calibrations of the Quiet Telescope.''
         Undergraduate Honors Thesis. University of Chicago. June 2008.
         % [paper][talk]
@@ -183,7 +139,7 @@
 		\textsl{Graduate Research Assistant, NEEP Department}\\ 
 		Developing and applying \Cyclus, a nuclear fuel cycle systems analysis tool.
 
-    \textbf{Idaho National Laboratory}, Idaho Falls, ID \hfill \textbf{June -- August 2010}\\
+    \textbf{Idaho National Laboratory}, Idaho Falls, ID \hfill \textbf{June -- Aug 2010}\\
 		\textsl{Graduate Research Assistant, Systems Analysis Campaign}\\ 
 		Developed software functions and requirements for the Fuel Cycle Simulator concept.
 
@@ -192,46 +148,67 @@
                 Programmed and machined calibration instrumentation elements for QUIET cosmological telescope.\\
                 Planned a protocol for telescope polarimeter calibration.
 
-    \textbf{Physics Department, Universidad de Chile}, Santiago, Chile \hfill \textbf{June -- September 2006}\\
+    \textbf{Physics Department, Universidad de Chile}, Santiago, Chile \hfill \textbf{June -- Sept 2006}\\
                 \textsl{Research Assistant, Chicago-Chile Research Exchange Program}\\
                  Constructed and operated a far from equilibrium granular materials experiment.
 
-    \textbf{Los Alamos Neutron Science Center}, Los Alamos, NM \hfill \textbf{June -- September 2004}\\ 
-                \textsl{Research Assistant, LANSCE-3} \hfill \textbf{May -- August 2003}\\
+    \textbf{Los Alamos Neutron Science Center}, Los Alamos, NM \hfill \textbf{June -- Sept 2004}\\ 
+                \textsl{Research Assistant, LANSCE-3} \hfill \textbf{May -- Aug 2003}\\
                 Applied digital filtration algorithms and MCNPX models to experimental data.\\
 		Received Distinguished Student Performance award, 2004.
     %__________________________________________________________________________________________________________________
     % Teaching Experience
     \section{\mysidestyle Teaching\\Experience}
 
-    \textbf{University of Chicago Scientific Computing Workshop}, Chicago, IL \hfill \textbf{April 2--3, 2012}\\
+    \textbf{Software Carpentry Scientific Computing Workshop}, Chicago, IL \hfill \textbf{Apr 2--3, 2012}\\
                \textbf{Hosted By : } The University of Chicago and Software-Carpentry.org \\
                \textsl{Organizer, Lecturer}\\
-               UNIX Shell, Version Control, Databases\\
+               UNIX Shell, Version Control, Databases
+
     \textbf{Advanced School on Scientific Software Development}, Trieste, Italy \hfill \textbf{Feb 20--Mar 2, 2012}\\
                \textbf{Invited By : } UNESCO/IAEA International Center for Theoretical Physics\\
-               Version Control, Python, Data Structures, Flow Control, SciPy, NumPy, MatPlotLib, Fortran and C Binding with Python\\
-    \textbf{University of Toronto Software Carpentry Bootcamp}, Toronto, Canada \hfill \textbf{Nov 7, 2011}\\
+               Version Control, Python, Data Structures, Flow Control, SciPy, NumPy, MatPlotLib, Fortran and C Binding with Python
+
+    \textbf{University of Toronto Software Carpentry Bootcamp}, Toronto, Canada \hfill \textbf{Nov 7--8, 2011}\\
                \textbf{Invited By : } Univeristy of Toronto SciNet Consortium For High Performance Computing\\
-               Version Control, Python, Testing, Automated Documentation\\
-    \textbf{The Hacker Within Scientific Computing Workshop}, Washington, D.C. \hfill \textbf{Nov 1, 2011}\\
-               \textbf{Invited By : } Young Professionals Congress, American Nuclear Society\\
-               Version Control, Testing, Automated Documentation, Collaboration Tools\\
-    \textbf{Michigan State Hacker Within Scientific Computing Boocamp}, East Lansing, MI \hfill \textbf{June 4--5, 2011}\\
-               \textsl{Invited By : } The Institute for Cyber Enabled Research (iCER) and BEACON NSF Science and Technology Center \\ 
-               UNIX Shell, Version Control, Text Editors, Databases, Automated Documentation, Unit Testing, Debugging\\
-    \textbf{University of Wisconsin Hacker Within Software Carpentry Bootcamp}, Madison, WI \hfill\textbf{2011}\\
+               Version Control, Python, Testing, Automated Documentation
+
+    \textbf{The Hacker Within Scientific Computing Tutorial}, Washington, D.C.  \hfill \textbf{Nov 1, 2011}\\
+               \textbf{Invited By : } Young Professionals Congress, American Nuclear Society Winter Meeting\\
+               Version Control, Testing, Automated Documentation, Collaboration Tools
+
+    \textbf{Michigan State Univ. Scientific Computing Bootcamp}, East Lansing, MI \hfill \textbf{June 4--5, 2011}\\
+               \textbf{Invited By : } MSU Institute for Cyber Enabled Research (iCER) and BEACON Center\\
+               UNIX Shell, Version Control, Text Editors, Databases, Automated Documentation, Unit Testing, Debugging
+
+    \textbf{The Hacker Within Software Carpentry Bootcamp}, Madison, WI \hfill\textbf{Jan 12--14, 2011}\\
+               \textbf{Hosted By : } The University of Wisconsin and The Hacker Within\\
                \textsl{Organizer, Lecturer}\\
-               UNIX Shell, Version Control, Text Editors, Databases, Automated Documentation, Unit Testing, Debugging\\
-    \textbf{University of Wisconsin Hacker Within Python Bootcamp}, Madison, WI \hfill \textbf{2010}\\
-               \textsl{Organizer, teaching assistant}\\
-    \textbf{University of Wisconsin, Hacker Within C++ Bootcamp}, Madison, WI \hfill \textbf{2009}\\
-               \textsl{Organizer, teaching assistant}\\
-    \textbf{Nuclear Engineering 405} Madison, WI \hfill \textbf{2009 \& 2010}\\ 
-               \textsl{UNIX Shell for Nuclear Engineers}\\
-    \textbf{University of Wisconsin, Hacker Within UNIX Bootcamp}, Madison, WI \hfill \textbf{2009}\\
+               UNIX Shell, Version Control, Text Editors, Databases, Automated Documentation, Unit Testing, Debugging
+
+    \textbf{The Hacker Within Python Bootcamp}, Madison, WI \hfill \textbf{Jan 12--14, 2010}\\
+               \textbf{Hosted By : } The University of Wisconsin and The Hacker Within\\
+               \textsl{Organizer, teaching assistant}
+
+    \textbf{UW Department of Nuclear Engineering : 506} Madison, WI \hfill \textbf{Feb 10, 2010}\\ 
+               \textsl{Guest Lecturer}\\
+               UNIX Shell, Basic Scripting, Environment Variables, Permissions, 
+               Regular Expressions, Makefiles 
+
+    \textbf{The Hacker Within C++ Bootcamp}, Madison, WI \hfill \textbf{Mar 24--31, 2009}\\
+               \textbf{Hosted By : } The University of Wisconsin and The Hacker Within\\
+               \textsl{Organizer, teaching assistant}
+
+    \textbf{UW Department of Nuclear Engineering : 406}, Madison, WI \hfill \textbf{Sept 9\&11, 2009}\\ 
+               \textsl{Guest Lecturer}\\
+               UNIX Shell, Basic Scripting, Environment Variables, Permissions, 
+               Regular Expressions, Makefiles 
+
+    \textbf{University of Wisconsin, Hacker Within UNIX Bootcamp}, Madison, WI \hfill \textbf{Jan 12--15, 2009}\\
+               \textbf{Hosted By : } The University of Wisconsin and The Hacker Within\\
                \textsl{Organizer, Lecturer}\\
-               UNIX Shell, Variables, Permissions, Sed, Grep, Awk, File Manipulation\\
+               UNIX Shell, Basic Scripting, Environment Variables, Permissions, Build Systems, 
+               Sed, Grep Awk, Common Utilities
 
     %__________________________________________________________________________________________________________________
     % Computer Skills
