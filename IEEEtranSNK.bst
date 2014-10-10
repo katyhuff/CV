@@ -2467,7 +2467,7 @@ FUNCTION {sort.format.names}
   numnames 'namesleft :=
     { namesleft #0 > }
     {
-      s nameptr "{vv{ } }{ll{ }}{  ff{ }}{  jj{ }}" format.name$ 't :=
+      "\FormatName{" s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ * "}" * 't :=
       nameptr #1 >
         {
           "   "  *
