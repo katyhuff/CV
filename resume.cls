@@ -200,8 +200,6 @@
 \ExecuteOptions{overlapped,centered}
 \ProcessOptions\relax
 
-\nofiles	     % resume's don't need .aux files
-
 
 \newtoks\tabular@text		    % holds the current list being processed
 \newtoks\tabular@head		    % holds the head tabular list
@@ -844,7 +842,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % From T. Pavlic
 
-\usepackage[shortlabels]{enumitem}
 
 % Simpler bibsections for CV sections
 % (thanks to natbib for inspiration)
@@ -867,6 +864,9 @@
 %   \restartlist{bibenum}
 %
 %   at the place where you want the numbering to reset.
+
+
+\usepackage[shortlabels]{enumitem}
 
 \makeatletter
 \newlength{\bibhang}
