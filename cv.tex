@@ -1,15 +1,18 @@
 
 %______________________________________________________________________________________________________________________
 % @brief    LaTeX2e Resume for Kathryn D. Huff
+
 \documentclass[margin,line]{resume}
-\newcommand{\Cyclus}{\textsc{Cyclus}\xspace}
+
+\newcommand{\Cyclus}{\textsc{Cyclus}}
 
 %______________________________________________________________________________________________________________________
 \begin{document}
 \name{\Large Kathryn D. Huff}
 \begin{resume}
+\bibliographystyle{abbrvnat}
+\nobibliography{cv}
 
-    %__________________________________________________________________________________________________________________
     % Contact Information
     \section{\mysidestyle Contact\\Information}
 
@@ -23,9 +26,10 @@
     %__________________________________________________________________________________________________________________
     % Research Interests
     \section{\mysidestyle Research\\Interests}
-		Advanced nuclear reactors and fuel cycles, scientific 
-                computation, sustainable energy systems, waste 
-                management, computational systems analysis. %
+		Advanced nuclear reactors and fuel cycles, multi-physics
+                simulation, nuclear fuel cycle analysis,
+                scientific computation.
+                %
     %__________________________________________________________________________________________________________________
     % Academic Appointments
     %	 	\vspace{-2mm}
@@ -44,6 +48,7 @@
     % Honors and Awards
     \vspace{-3mm}
     \section{\mysidestyle Honors and\\Awards} 
+                National Energy Research Scientific Computing Allocation, Senior Investigator.    \hfill \textbf{2015--2016}\vspace{.5mm}\\%
                 Data Science Fellowship, Berkeley Institute for Data Science, UC Berkeley.    \hfill \textbf{2014--2016}\vspace{.5mm}\\% 
                 Nuclear Science and Security Consortium Postdoctoral Fellowship.   \hfill \textbf{2013--2016}\vspace{.5mm}\\%
 		DOE Office of Science Laboratory Graduate Appointment, Argonne, IL.   \hfill \textbf{2011--2013}\vspace{.5mm}\\%
@@ -62,17 +67,16 @@
                 Developing computational tools and multiphysics models for advanced reactor safety analysis.  \vspace{-3mm}
 
     \textbf{Argonne National Laboratory}, Argonne, IL \hfill \textbf{June 2011 -- Aug 2013}\\
-		\textsl{Laboratory Graduate Research Appointee, Used Fuel Disposition Campaign}\\ 
-		Developed a used fuel disposition and generic repository computational model.  \vspace{-3mm}
+		\textsl{Laboratory Graduate Research Appointee, Used Fuel Disposition Campaign}\\
+		Developed a used fuel disposition and generic repository computational model.
 
     \textbf{University of Wisconsin - Madison, NEEP Dept.}, Madison, WI \hfill \textbf{June 2008 -- Aug 2013}\\
-		\textsl{Graduate Research Assistant, Computational Nuclear Engineering Research Group}\\ 
-		Developed and applied \Cyclus, a nuclear fuel cycle systems analysis tool.  \vspace{-3mm}
+		\textsl{Graduate Research Assistant, Computational Nuclear Engineering Research Group}\\
+		Developed and applied \Cyclus, a nuclear fuel cycle systems analysis tool.
 
     \textbf{Idaho National Laboratory}, Idaho Falls, ID \hfill \textbf{June -- Aug 2010}\\
-		\textsl{Graduate Research Assistant, Systems Analysis Campaign}\\ 
-		Developed software functions and requirements for the Fuel Cycle Simulator concept.  \vspace{-3mm}
-
+		\textsl{Graduate Research Assistant, Systems Analysis Campaign}\\
+		Developed software functions and requirements for the Fuel Cycle Simulator concept.
     \textbf{Kavli Institute For Cosmological Physics}, Chicago, IL \hfill \textbf{Jan 2005 -- June 2008}\\
                 \textsl{Research Assistant, Laboratory for Astrophysics and Space Research}\\
                 Programmed \& machined instrumentation. Planned protocol for QUIET polarimeter calibration.  \vspace{-3mm}
@@ -81,15 +85,16 @@
                 \textsl{Research Assistant, Chicago-Chile Research Exchange Program}\\
                  Constructed and operated a far from equilibrium granular materials experiment.  \vspace{-3mm}
 
-    \textbf{Los Alamos Neutron Science Center}, Los Alamos, NM \hfill \textbf{June -- Sept 2004}\\ 
+    \textbf{Los Alamos Neutron Science Center}, Los Alamos, NM \hfill \textbf{June -- Sept 2004}\\
                 \textsl{Research Assistant, LANSCE-3} \hfill \textbf{May -- Aug 2003}\\
                 Applied digital filtration algorithms and MCNPX models to experimental data.  \vspace{-3mm}
     %__________________________________________________________________________________________________________________
     % Computer Skills
-    \section{\mysidestyle Scientific\\Computing\\Skills} 
-                \textbf{Languages} \hfill bash/csh, C, C++, FORTRAN, Perl, Python, SQL, XML.\vspace{.5mm}\\%
-                \textbf{Build Systems} \hfill automake, CMake, distutils, make.\vspace{.5mm}\\%
-                \textbf{Test Frameworks} \hfill CTest, GoogleTest, nose, unittest.\vspace{.5mm}\\%
+    \section{\mysidestyle Scientific\\Computing\\Skills}
+                \textbf{Languages} \hfill bash/csh, C++, FORTRAN, Perl, Python, XML.\vspace{.5mm}\\%
+                \textbf{Build Systems} \hfill make, CMake, automake.\vspace{.5mm}\\%
+                \textbf{Databases} \hfill HDF5, SQL.\vspace{.5mm}\\%
+                \textbf{Test Frameworks} \hfill CTest, GoogleTest, nose.\vspace{.5mm}\\%
                 \textbf{Version Control} \hfill cvs, git, hg, svn.\vspace{.5mm}\\%
                 \textbf{Nuclear} \hfill Cyclus, MCNP5/6/X, MOOSE, ORIGEN, PyNE, Serpent, VISION.\vspace{.5mm}\\%
                 \textbf{Other Tools} \hfill Doxygen, GoldSim, HDF5, \LaTeX, MathCAD, Mathematica, MatLab, Sphinx.\vspace{.5mm}%
@@ -97,12 +102,13 @@
     % Professional, Student Organizations
     \vspace{-3mm}
     \section{\mysidestyle Professional\\Service}
-		\textbf{Board Member}, Software Carpentry. \hfill \textbf{2014--present}\vspace{.5mm}\\%
-		\textbf{Secretary}, Young Members Group, American Nuclear Society (ANS). \hfill \textbf{2013--2015}\vspace{.5mm}\\%
+		\textbf{Vice Chair}, Fuel Cycle \& Waste Management Division, ANS. \hfill \textbf{2015--2016}\vspace{.5mm}\\%
+		\textbf{Chair}, Steering Committee, Software Carpentry Foundation.  \hfill \textbf{2014--2015}\vspace{.5mm}\\%
+		\textbf{Editor}, Proceedings of the SciPy Scientific Python Conference.  \hfill \textbf{2015}\vspace{.5mm}\\%
 		\textbf{Secretary--Treasurer}, Fuel Cycle \& Waste Management Division, ANS. \hfill \textbf{2013--2015}\vspace{.5mm}\\%
 		\textbf{Technical Program Co-Chair}, SciPy, Scientific Python Conference.  \hfill \textbf{2013--2014}\vspace{.5mm}\\%
 		\textbf{Moderator, Organizer, Panelist}, inSCIght Scientific Computing Podcast. \hfill \textbf{2011--2013}\vspace{.5mm}\\%
-		\textbf{Editor}, Proceedings of SciPy Scientific Python Conference.  \hfill \textbf{2013}\vspace{.5mm}\\%
+		\textbf{Editor}, Proceedings of the SciPy Scientific Python Conference.  \hfill \textbf{2013}\vspace{.5mm}\\%
 		\textbf{Co-Founder}, Nuclear Pride, LGBTQA Organization. \hfill \textbf{2011--2013}\vspace{.5mm}\\%
 		\textbf{Co-Founder, Treasurer, President}, Hacker Within Scientific Computing Group. \hfill \textbf{2008--2011}\vspace{.5mm}%
     %__________________________________________________________________________________________________________________
@@ -116,7 +122,11 @@
 % \input{bwd} 
 % \input{bt} 
 %______________________________________________________________________________________________________________________
+
+
+    %__________________________________________________________________________________________________________________
 \end{resume}
+
 \end{document}
 
 
