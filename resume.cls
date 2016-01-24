@@ -876,7 +876,7 @@
 \newlist{bibsection}{itemize}{3}
 \setlist[bibsection]{label=,leftmargin=\bibhang}
 \newlist{bibenum}{enumerate}{3}
-\setlist[bibenum]{resume,label=[\arabic*],leftmargin={\bibhang\widthof{\ \ \ }}}
+\setlist[bibenum]{resume,label=[\arabic*],leftmargin={\bibhang}}
 \setlist*[bibsection,bibenum]{%
         itemindent=-\bibhang,
         itemsep=\bibsep,parsep=\z@,partopsep=0pt,
