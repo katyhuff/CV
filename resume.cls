@@ -769,12 +769,10 @@
 % with everything in the left of its column
 
 \@secpenalty = -500
-\topmargin 0pt
 \headheight 0pt
 \headsep 0pt
 \textheight 260mm
 \parindent 0pt
-%\topmargin 0in
 \topmargin 0.5in
 \oddsidemargin 0pt
 \evensidemargin 0pt
@@ -817,7 +815,7 @@
 \itemsep=0cm
 \parsep=0cm
 \topmargin -12mm
-%\textheight 270mm
+\textheight 250mm
 %\textheight 275mm
 
 \newenvironment{list1}{
