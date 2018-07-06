@@ -3,11 +3,17 @@
 
 \documentclass[margin,line]{resume}
 \usepackage{bibentry}
-\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\urlstyle{same}
 \usepackage{xspace}
-
+%\textheight=10.75in
 \newcommand{\Cyclus}{\textsc{Cyclus}\xspace}%
-
 
 %______________________________________________________________________________________________________________________
 \begin{document}
@@ -20,8 +26,9 @@
         \textsl{University of Illinois, Urbana-Champaign}
         \hfill e-mail: katyhuff@gmail.com            \vspace{0mm}\\\vspace{0mm}%
     \textsl{Nuclear, Plasma, and Radiological Engineering}
-        \hfill website: katyhuff.github.com     \vspace{0mm}\\\vspace{-4.5mm}%
+        \hfill website: katyhuff.github.com     \vspace{0mm}\\\vspace{0mm}%
     \textsl{Affiliate Faculty, National Center for Supercomputing Applications}           \vspace{0mm}\\\vspace{0mm}%
+    \textsl{Affiliate Faculty, Computational Science and Engineering}           \vspace{0mm}\\\vspace{-4.5mm}%
 
     %__________________________________________________________________________________________________________________
     % Resume Objective
@@ -115,9 +122,21 @@
     %__________________________________________________________________________________________________________________
     % Grants Awarded
 %    \section{\mysidestyle Grants\\Awarded} 
+%    \textbf{Enabling Load Following Capability in the Transatomic Power MSR} \hfill \textsl{Period:} 
+%    2018--2021\\
+%    \textsl{Source:} ARPA - E - MEITNER \hfill \textsl{Award Total:} \textbf{\$999,694}\\
+%    \textsl{Role:} \textbf{Principal Investigator} \hfill \textsl{Huff Allocation:} \textbf{\$205,000}\vspace{2mm}\\%
+%    \textbf{US Research Software Sustainability Institute (URSSI)} \hfill \textsl{Period:} 
+%    2017--2018\\
+%    \textsl{Source:} NSF - OAC - SI2 - S2I2 Conceptualization \hfill \textsl{Award Total:} \$499,999\\
+%    \textsl{Role:} Senior Investigator \hfill \textsl{Huff Allocation:} \textbf{N/A}\vspace{2mm}\\%
+%    \textbf{Dynamic Transition Analysis with TIMES} \hfill \textsl{Period:} 
+%    2018--2019\\
+%    \textsl{Source:} I$^2$CNER \hfill \textsl{Award Total:} \$76,359\\
+%    \textsl{Role:} Co-PI \hfill \textsl{Huff Allocation:} \textbf{\$76,359}\vspace{2mm}\\%
 %    \textbf{Investigation of Agricultural Uses of Nuclear Waste Heat} \hfill \textsl{Period:} 2017--2018\\
 %    \textsl{Source:} Exelon \hfill \textsl{Award Total:} \$151,257\\
-%    \textsl{Role:} Co-PI \hfill \textsl{Huff Allocation:} \textbf{\$10,000}\vspace{2mm}\\%
+%    \textsl{Role:} Co-PI \hfill \textsl{Huff Allocation:} \textbf{\$11,678}\vspace{2mm}\\%
 %    \textbf{Consortium for Verification Technology} \hfill \textsl{Period:} 2015--2020\\ 
 %    \textsl{Source:} NNSA Office of DNN R\&D \hfill \textsl{Award Total:} \$25,000,000\\
 %    \textsl{Role:} UIUC PI, CVT Investigator  \hfill \textsl{Huff Allocation:} \textbf{\$347,000}\vspace{2mm}\\%
@@ -139,18 +158,6 @@
 %    \textbf{Repurposing NPPs for Optimum Utilization and Energy Recovery} \hfill \textsl{Period:} 2017--2020\\
 %    \textsl{Source:} DOE, NEUP IRP \hfill \textsl{Award Total:} \$3,000,000\\
 %    \textsl{Role:} Co-PI \hfill \textsl{Huff Allocation:} \textbf{$~\$$300,000}\vspace{2mm}\\%
-%    \textbf{Benchmark Demonstration of the NEAMS Workbench} \hfill \textsl{Period:} 2017--2021\\
-%    \textsl{Source:} DOE, NEUP R\&D \hfill \textsl{Award Total:} \$800,000\\
-%    \textsl{Role:} PI \hfill \textsl{Huff Allocation:} \textbf{\$320,000}\vspace{2mm}\\%
-%    \textbf{A Novel Small Advanced Reactor with FCM Fuel} \hfill \textsl{Period:} 2017--2019\\
-%    \textsl{Source}: DOE, NEUP R\&D \hfill \textsl{Award Total:} \$400,000\\
-%    \textsl{Role: Co-PI} \hfill \textsl{Huff Allocation:} \textbf{\$160,000}\vspace{2mm}\\%
-%    \textbf{Chemical, TH, \& Neutronic Coupled Capability for MSRs} \hfill \textsl{Period:} 2018--2021\\
-%    \textsl{Source: Idaho National Laboratory LDRD} \hfill \textsl{Award Total:} \$1,125,000\\
-%    \textsl{Role: Co-Investigator} \hfill \textsl{Huff Allocation:} \textbf{\$300,000}\vspace{2mm}\\%
-%    \textbf{Conceptualizing a US Research Software Sustainability Institute} \hfill \textsl{Period:} 2018--2019\\
-%    \textsl{Source: NSF SI2-S2I2} \hfill \textsl{Award Total:} \$500,000\\
-%    \textsl{Role: Senior Personnel} \hfill \textsl{Huff Allocation:} \textbf{N/A}\\
 %    \end{graytext}
     %__________________________________________________________________________________________________________________
     % Books YO!!!
@@ -158,19 +165,22 @@
     \section{\mysidestyle Books}
       \begin{bibenum}
       \item Scopatz, A., \textbf{Huff, K.}. ``Effective Computation in
-      Physics: Field Guide to Research in Python'' O'Reilly Media. 2015.
-      \url{shop.oreilly.com/product/0636920033424.do}.
+      Physics: Field Guide to Research in Python'' O'Reilly Media.
+      \href{shop.oreilly.com/product/0636920033424.do}{ISBN:978-1491901533}, 
+      2015.
       \end{bibenum}
 %    \section{\mysidestyle Book\\Chapters}
 %      \begin{bibenum} 
 %      \item \textbf{Huff, K.}. ``Case Study: Cyclus Project,'' in The Practice 
 %              of Reproducible Research, 1st ed., Justin Kitzes, Fatma Imamoglu, 
 %              and Daniel Turek, Eds. University of California, Berkeley: 
-%              University of California Press. 2017.
+%              University of California Press.  
+%              \href{https://www.ucpress.edu/book.php?isbn=9780520294752}{ISBN:9780520294752}, 2017.
 %      \item \textbf{Huff, K.}. ``Lessons Learned,'' in The Practice of Reproducible 
 %              Research, 1st ed., Justin Kitzes, Fatma Imamoglu, and Daniel 
 %              Turek, Eds. University of California, Berkeley: University of 
-%              California Press. 2017.
+%              California Press.  
+%              \href{https://www.ucpress.edu/book.php?isbn=9780520294752}{ISBN:9780520294752}, 2017.
 %      \item \textbf{Huff, K.}. ``Economics of Advanced Reactors and Fuel 
 %              Cycles,'' in Storage and Hybridization of Nuclear Energy, 1st 
 %              ed., Hitesh Bindra, Ed. Elsevier S\&T Books.\textsl{(in 
@@ -179,80 +189,109 @@
     \section{\mysidestyle Journal\\Publications}
     %\section{\mysidestyle Refereed\\Journal\\Publications} % also, vspace below
       \begin{bibenum}
-       \item Lindsay, A., Ridley, G., Rykhlevskii, A., \textbf{Huff, K.} ``Introduction to 
-               Moltres: an Application for Simulation of Molten Salt 
-               Reactors'',  \textbf{Annals of Nuclear Energy}, 2017 \textsl{(in 
-               press).}
-      \item Allen, A., Aragon, C., Becker, C., Carver, J., Chis, A., Combemale, B., Croucher, M., Crowston, K., Garijo, D., Gehani, A., Goble, C., Haines, R., Hirschfeld, R., Howison, J., \textbf{Huff, K.}, Jay, C., Katz, D.S., Kirchner, C., Kuksenok, K., L\"{a}mmel, R., Nierstrasz, O., Turk, M., Nieuwpoort, R. van, Vaughn, M., Vinju, J.J., ``Engineering Academic Software (Dagstuhl Perspectives Workshop 16252).'' \textbf{Dagstuhl Manifestos} 6, 1–20. 2017. \url{doi:10.4230/DagMan.6.1.1}
-       \item \textbf{Huff,~K.} ``Rapid Methods for Radionuclide Contaminant
-       Transport in Nuclear Fuel Cycle Simulation'', \textbf{Advances in 
-       Engineering Software}, 2017. \url{https://doi.org/10.1016/j.advengsoft.2017.07.006}
+       \item Lindsay, A., Ridley, G., Rykhlevskii, A., \textbf{Huff, K.} 
+               ``Introduction to Moltres: an Application for Simulation of 
+               Molten Salt Reactors'',  \textbf{Annals of Nuclear Energy}, 
+               \url{https://doi.org/10.1016/j.anucene.2017.12.025}, 
+               Apr. 2018.
+       \item Smith, A.M., Niemeyer, K.E., Katz, D.S., Barba, L. A., Githinji, 
+               G., Gymrek, M., \textbf{Huff, K.} et al. 
+              2018. ``Journal Of Open Source Software (JOSS): Design and 
+              First-Year Review.'' \textbf{PeerJ Computer Science} 4: e147. 
+              \url{https://doi.org/10.7717/peerj-cs.147}. Feb. 2018.
+       \item Lindsay, A., \textbf{Huff, K.} 
+               ``Moltres: finite element based simulation of molten salt 
+               reactors'',  \textbf{The Journal of Open Source Software}, 
+               \url{https://doi.org/10.21105/joss.00298}, Jan. 2018.
+      \item Allen, A., Aragon, C., Becker, C., Carver, J., Chis, A., Combemale, 
+              B., Croucher, M., Crowston, K., Garijo, D., Gehani, A., Goble, 
+              C., Haines, R., Hirschfeld, R., Howison, J., \textbf{Huff, K.}, 
+              Jay, C., Katz, D.S., Kirchner, C., Kuksenok, K., L\"{a}mmel, R., 
+              Nierstrasz, O., Turk, M., Nieuwpoort, R. van, Vaughn, M., Vinju, 
+              J.J., ``Engineering Academic Software (Dagstuhl Perspectives 
+              Workshop 16252).'' \textbf{Dagstuhl Manifestos} 6, 1–20.  
+              \url{https://doi.org/10.4230/DagMan.6.1.1}, 2017. 
+       \item \textbf{Huff,~K.} ``Rapid Methods for Radionuclide Contaminant 
+               Transport in Nuclear Fuel Cycle Simulation'', \textbf{Advances 
+               in Engineering Software}, 
+               \url{https://doi.org/10.1016/j.advengsoft.2017.07.006}, Dec. 2017. 
       \item Andreades,~C., Cisneros,~A.T., Choi,~J.K., Chong,~A.Y., 
               Fratoni,~M., Hong,~S., Huddar,~L.R., \textbf{Huff,~K.}, Kendrick,~J., 
               Krumwiede,~D.L., Laufer,~M., Munk,~M., Scarlat,~R.O., Wang,~X., 
               Zwiebaum,~N., Greenspan,~E. and P. Peterson.  ``Design Summary of 
               the Mark-I Pebble-Bed, Fluoride Salt–Cooled, High-Temperature 
-              Reactor Commercial Power Plant,'' \textbf{Nuclear Technology}, vol. 195, 
-              no. 3, pp. 222-238, Sep. 2016.
-       \item \textbf{Huff,~K.}, Gidden,~M., Carlsen,~R., Flanagan,~R.,
-       McGarry,~M., Opotowsky,~A., Schneider,~E.,
-       Scopatz,~A., Wilson,~P.  ``Fundamental Concepts in the \Cyclus Nuclear Fuel Cycle
-       Simulation Framework.'' \textbf{Advances in Engineering Software}, vol. 94, pp. 46–59, Apr. 2016.
-       \item Aruliah,~D.A., Brown,~C.T., Chue Hong,~N.P., Davis,~M., Guy,~R.T.,
-          Haddock,~S.H.D., \textbf{Huff,~K.}, Mitchell,~I., Plumbley,~M., Waugh,~B.,
-          White,~E.P., Wilson,~G.V., and Wilson,~P.P.H.  ``Best Practices For
-          Scientific Computing.'' \textbf{PLOS Biology}, Vol 1, Issue 12,
-          2014. \url{dx.doi.org/10.1371/journal.pbio.1001745}
-       \item Clerc, M., Dunstan, J., \textbf{Huff, K.}, Mujica, N., Varas, G.
-          ``Liquid-Solid-Like Transition in Quasi-One-Dimensional Driven
-          Granular Media '',  \textbf{Nature Physics}, Vol 4, 249 - 254, 2008.
+              Reactor Commercial Power Plant,'' \textbf{Nuclear Technology}, 
+              vol. 195, no. 3, pp. 222-238,
+              \url{https://doi.org/10.13182/NT16-2},
+              Sep. 2016.
+       \item \textbf{Huff,~K.}, Gidden,~M., Carlsen,~R., Flanagan,~R., 
+               McGarry,~M., Opotowsky,~A., Schneider,~E., Scopatz,~A., 
+               Wilson,~P.  ``Fundamental Concepts in the \Cyclus Nuclear Fuel 
+               Cycle Simulation Framework.'' \textbf{Advances in Engineering 
+               Software}, vol. 94, pp. 46–59, 
+               \url{https://doi.org/10.1016/j.advengsoft.2016.01.014},
+               Apr. 2016.
+       \item Aruliah,~D.A., Brown,~C.T., Chue Hong,~N.P., Davis,~M., Guy,~R.T., 
+               Haddock,~S.H.D., \textbf{Huff,~K.}, Mitchell,~I., Plumbley,~M., 
+               Waugh,~B., White,~E.P., Wilson,~G.V., and Wilson,~P.P.H.  ``Best 
+               Practices For Scientific Computing.'' \textbf{PLOS Biology}, Vol 
+               1, Issue 12, \url{https://dx.doi.org/10.1371/journal.pbio.1001745}, 
+               2014. 
+       \item Clerc, M., Dunstan, J., \textbf{Huff, K.}, Mujica, N., Varas, G.  
+               ``Liquid-Solid-Like Transition in Quasi-One-Dimensional Driven 
+               Granular Media '',  \textbf{Nature Physics}, Vol 4, 249 - 254, 
+               \url{https://doi.org/10.1038/nphys884}, 2008.
       \end{bibenum}
-      %\vspace{2mm} % add this back if you return to Refereed Journal..
-%    \section{\mysidestyle Submitted}
+      \vspace{2mm} % add this back if you return to Refereed Journal..
+%      \section{\mysidestyle Submitted}
 %      \begin{bibenum}
+%      \item Bae, J.W., Singer, C.E., \textbf{Huff, K.} ``Synergistic Spent 
+%              Nuclear Fuel Dynamics Within The European Union.'' Submitted to 
+%              Progress in Nuclear Energy, April 2018.
        %\item Scopatz,~A., Gidden,~M., Carlsen,~R., Flanagan,~R.,
        %\textbf{Huff,~K.}, McGarry,~M., Opotowsky,~A., Rakhimov,~O., Welch,~Z.,
        %Wilson,~P.  ``\Cyclus Archetypes'', 2015.
        %\url{http://arxiv.org/abs/1511.05619}
+%      \end{bibenum}
     \section{\mysidestyle Selected\\Refereed\\Conference\\Proceedings}
     \begin{bibenum}
-%    \item Niemeyer, K., Smith, A., Barba, L., Githinji, G., Gymrek, M., 
-%            \textbf{Huff, K.}, Katz, D., Madan, C., Cabunoc, A. ``Introducing 
-%            JOSS: The Journal of Open Source Software'' \textbf{Scientific 
-%            Computing with Python Conference (SciPy 2017)}, Austin, TX. July 
-%            2017.
-%    \item \textbf{Huff, K.}, Bae, J., Mummah, K., Flanagan, R., Scopatz, A.
-%            ``Current Status of Predictive Transition Capability in Fuel Cycle 
-%            Simulation'' \textbf{GLOBAL 2017 International Nuclear Fuel Cycle 
-%            Conference}, Seoul, South Korea. September 2017.
-%      \item Bae, J., Roy, W., \textbf{Huff, K.}.
-%            ``Benefits of Siting a Borehole Repository on Non-Operating Nuclear 
-%            Facility'' Paper 19727.  \textbf{International High-Level Radioactive 
-%            Waste Management Converence (IHLRWM 2017)},
-%            Charlotte, NC. April 2017. 
-      \item Wang, X., \textbf{Huff, K.}, Aufiero, M., Peterson, P., Fratoni, M.
-            ``Coupled reactor kinetics and heat transfer model for nuclear 
-            reactor transient analysis.'' Paper 60728.  \textbf{24th 
-            International Conference on Nuclear Engineering (ICONE24)}, 
-            Charlotte, NC.  June 2016. 
-      \item Wang, X., \textbf{Huff, K.}, Aufiero, M., Peterson, P., Fratoni, M.
-            ``A sensitivity study of a coupled kinetics and thermal-hydraulics 
-            model for Fluoride-salt-cooled, High-temperature Reactor (FHR) 
-            transient analysis.'' \textbf{The International 
-            Congress on Advances in Nuclear Power Plants (ICAPP)}, San 
-            Francisco, CA. April 2016.
+    \item Niemeyer, K., Smith, A., Barba, L., Githinji, G., Gymrek, M., 
+            \textbf{Huff, K.}, Katz, D., Madan, C., Cabunoc, A. ``Introducing 
+            JOSS: The Journal of Open Source Software'' \textbf{Scientific 
+            Computing with Python Conference (SciPy 2017)}, Austin, TX. July 
+            2017.
+    \item \textbf{Huff, K.}, Bae, J., Mummah, K., Flanagan, R., Scopatz, A.
+            ``Current Status of Predictive Transition Capability in Fuel Cycle 
+            Simulation'' \textbf{GLOBAL 2017 International Nuclear Fuel Cycle 
+            Conference}, Seoul, South Korea. September 2017.
+      \item Bae, J., Roy, W., \textbf{Huff, K.}.
+            ``Benefits of Siting a Borehole Repository on Non-Operating Nuclear 
+            Facility'' Paper 19727.  \textbf{International High-Level Radioactive 
+            Waste Management Converence (IHLRWM 2017)},
+            Charlotte, NC. April 2017. 
+%      \item Wang, X., \textbf{Huff, K.}, Aufiero, M., Peterson, P., Fratoni, M.
+%            ``Coupled reactor kinetics and heat transfer model for nuclear 
+%            reactor transient analysis.'' Paper 60728.  \textbf{24th 
+%            International Conference on Nuclear Engineering (ICONE24)}, 
+%            Charlotte, NC.  June 2016. 
+%      \item Wang, X., \textbf{Huff, K.}, Aufiero, M., Peterson, P., Fratoni, M.
+%            ``A sensitivity study of a coupled kinetics and thermal-hydraulics 
+%            model for Fluoride-salt-cooled, High-temperature Reactor (FHR) 
+%            transient analysis.'' \textbf{The International 
+%            Congress on Advances in Nuclear Power Plants (ICAPP)}, San 
+%            Francisco, CA. April 2016.
 %      \item Greenberg, H., Fratoni, M., Djokic, D., \textbf{Huff, K.},
 %         Nibbelink, R., Scopatz, A. ``The Application of CYCLUS to Fuel Cycle
 %         Transition Modeling'' Paper 5061.
 %         \textbf{Proceedings of Global}, Paris, France. September 2015.
-      \item \textbf{Huff, K.}, ``PyRK: Python for Reactor Kinetics.''
-         \textbf{Proceedings of the 14th Python in Science Conference}, Austin,
-         TX. July 2015.
-      \item Krumwiede, D.L., Andreades, C., Choi, J.K., Cisneros, A.T., Huddar, L.,
-         \textbf{Huff, K.}, Laufer, M.D., Munk, M., Scarlat, R.O., Seifried, J.E.,
-         Zweibaum, N., Greenspan, E., Peterson, P.F.  ``Design of the Mark-I
-         Pebble-Bed, Fluoride-Salt-Cooled, High-Temperature Reactor Commercial Power
-         Plant,'' Paper 14231.  \textbf{Proceedings of ICAPP}, Charlotte, NC. April 2014.
+%      \item \textbf{Huff, K.}, ``PyRK: Python for Reactor Kinetics.''
+%         \textbf{Proceedings of the 14th Python in Science Conference}, Austin,
+%         TX. July 2015.
+%      \item Krumwiede, D.L., Andreades, C., Choi, J.K., Cisneros, A.T., Huddar, L.,
+%         \textbf{Huff, K.}, Laufer, M.D., Munk, M., Scarlat, R.O., Seifried, J.E.,
+%         Zweibaum, N., Greenspan, E., Peterson, P.F.  ``Design of the Mark-I
+%         Pebble-Bed, Fluoride-Salt-Cooled, High-Temperature Reactor Commercial Power
+%         Plant,'' Paper 14231.  \textbf{Proceedings of ICAPP}, Charlotte, NC. April 2014.
 %      \item \textbf{Huff, K.} ``\Cyclus Fuel Cycle Simulation Capabilities with the Cyder Disposal System Model,'' Paper 7730.
 %         \textbf{Proceedings of Global}, Salt Lake City, UT. October 2013.
 %      \item Gidden, M., Wilson, P., \textbf{Huff, K.}, Carlsen, R. ``An Agent-Based Framework for Fuel Cycle Simulation with Recycling,'' Paper 7737.
@@ -278,17 +317,24 @@
     %            Submitted Journal Publications \vspace{-2mm}\\\vspace{-3mm}%
     %__________________________________________________________________________________________________________________
     % Conference Publications
-    \section{\mysidestyle Selected\\Conference\\Abstracts}
-    \begin{bibenum}
-%    \item Bae, J. W., \textbf{Huff, K.}, Singer,C. ``Synergistic Spent Nuclear Fuel Dynamics Within the European Union'' 
-%            \textbf{Transactions of the American Nuclear Society Winter Conference.} 
-%            Washington, DC, 2017.  
-    \item Rykhlevskii, A., Lindsay, A., \textbf{Huff, K.} ``Full-core analysis of thorium-fueled Molten Salt Breeder Reactor using the SERPENT 2 Monte Carlo code'' 
-            \textbf{Transactions of the American Nuclear Society Winter Conference.} 
-            Washington, DC, United States, 2017.
-    \item Rykhlevskii, A., Lindsay, A., \textbf{Huff, K.} ``Online reprocessing simulation for thorium-fueled molten salt breeder reactor,'' 
-            \textbf{Transactions of the American Nuclear Society Winter Conference.} 
-            Washington, DC, United States, 2017.
+%    \section{\mysidestyle Selected\\Conference\\Abstracts}
+%    \begin{bibenum}
+%    \item Rykhlevskii, A., \textbf{Huff, K.} ``Computational Tools for Advanced 
+%            Molten Salt Reactor Simulation'', \textbf{Blue Waters Symposium}, 
+%            Sun River, OR, June 2018.
+ %   \item Bae, J. W., \textbf{Huff, K.}, Singer,C. ``Synergistic Spent Nuclear Fuel Dynamics Within the European Union'' 
+ %           \textbf{Transactions of the American Nuclear Society Winter Conference.} 
+ %           Washington, DC, November 2017.  
+ %   \item Rykhlevskii, A., Lindsay, A., \textbf{Huff, K.} ``Full-core analysis of thorium-fueled Molten Salt Breeder Reactor using the SERPENT 2 Monte Carlo code'' 
+ %           \textbf{Transactions of the American Nuclear Society Winter Conference.} 
+ %           Washington, DC, United States, November 2017.
+ %   \item Rykhlevskii, A., Lindsay, A., \textbf{Huff, K.} ``Online reprocessing simulation for thorium-fueled molten salt breeder reactor,'' 
+ %           \textbf{Transactions of the American Nuclear Society Winter Conference.} 
+ %           Washington, DC, United States, 2017.
+%    \item Ridley, G., Lindsay, A., and \textbf{Huff, K.} ``An 
+%            Introduction To Moltres, an MSR Multiphysics Code.'' \textbf{Transactions 
+%            of the American Nuclear Society Winter Conference}. Washington 
+%            D.C., United States, November 2017.
 %      \item \textbf{Huff, K.}, Scopatz, A. ``Modernizing Computational Nuclear Engineering Education -- In the Open''
 %         \textbf{Transactions of the American Nuclear Society Winter Conference.}
 %         Washington, DC. November 2015.
@@ -337,19 +383,45 @@
 %      \item \textbf{Huff, K.}, Wilson, P.P.H., Oliver, K. ``GENIUS Version 2: Modelling the Worldwide Nuclear Fuel Cycle.''
 %        (poster)  \textbf{eHub Conference.} University of Wisconsin -
 %        Madison. November 2009.
-%        % [poster]
-    \end{bibenum}
+        % [poster]
+%    \end{bibenum}
 
     %__________________________________________________________________________________________________________________
     % Technical Reports
 %    \section{\mysidestyle Technical\\Reports}
-%    \begin{bibenum}
-%      \item C. Andreades, A. T. Cisneros, J.K. Choi, A.Y.K. Chong, D. L.
-%      Krumwiede, L.R. Huddar, \textbf{K. Huff}, M. R. Laufer, M.O. Munk, R.O.
-%      Scarlat, J. Seifried, N. Zweibaum, E. Greenspan, and P. F. Peterson,
-%      ``Technical Description of the ‘Mark 1’ Pebble-Bed Fluoride-Salt-Cooled
-%      High-Temperature Reactor (PB-FHR) Power Plant,'' \textbf{U.C. Berkeley Nuclear
-%      Engineering}, Report UCBTH-14-002, 2014.
+%    \begin{bibenum} 
+%      \item Lindsay, A., \textbf{Huff, K.}. ``Coupled Multi-Physics of Advanced 
+%              Molten Salt Nuclear Reactors.'' \textbf{National Center for 
+%              Supercomputing Applications,} Blue Waters Annual Report, 
+%              \url{https://bluewaters.ncsa.illinois.edu/liferay-content/document-library/BW_AR_2017.pdf} 
+%              2017.  
+%      \item Chee, G.J., Bae, J.W., \textbf{Huff, K.}, ``Numerical Experiments 
+%              For Verifying Demand Driven Deployment Algorithms.'' 
+%              \textbf{Advanced Reactors and Fuel Cycles Report Series}, Nuclear Plasma and Radiological Engineering, University of Illinois.  Report 
+%              UIUC-ARFC-2018-01, 
+%              \url{https://arfc.npre.illinois.edu/research/reports/uiuc-arfc-2018-01.pdf} 
+%              Apr.2018.  
+%      \item Bae, J.W. \textbf{Huff, K.}, ``Non-algorithmic Capability Gaps for 
+%              Cyclus and Cycamore Transition Analyses,'' \textbf{Advanced 
+%              Reactors and Fuel Cycles Report Series}, Nuclear Plasma and 
+%              Radiological Engineering, University of Illinois.  Report 
+%              UIUC-ARFC-2017-02, 
+%              \url{https://arfc.npre.illinois.edu/research/reports/uiuc-arfc-2017-02.pdf} 
+%              Nov. 2017.  
+%      \item Ridley, G., Lindsay, A., Turk, M., \textbf{Huff, K.}, ``Multiphysics 
+%              Analysis of Molten Salt Reactor Transients,'' \textbf{Advanced 
+%              Reactors and Fuel Cycles Report Series}, Nuclear Plasma and 
+%              Radiological Engineering, University of Illinois.  Report 
+%              UIUC-ARFC-2017-01, 
+%              \url{https://arfc.npre.illinois.edu/research/reports/uiuc-arfc-2017-01.pdf} 
+%              Aug. 2017.  
+%      \item C. Andreades, A. T. Cisneros, J.K. Choi, A.Y.K. Chong, D. L.  
+%              Krumwiede, L.R. Huddar, \textbf{K. Huff}, M. R. Laufer, M.O. 
+%              Munk, R.O.  Scarlat, J. Seifried, N. Zweibaum, E. Greenspan, and 
+%              P. F. Peterson, ``Technical Description of the ‘Mark 1’ 
+%              Pebble-Bed Fluoride-Salt-Cooled High-Temperature Reactor (PB-FHR) 
+%              Power Plant,'' \textbf{U.C. Berkeley Nuclear Engineering}, Report 
+%              UCBTH-14-002, 2014.
 %      \item \textbf{Huff, K.}, Nutt, W.M. ``FY12 Sensitivity Studies Using the UFD Clay Generic Disposal System Model.''
 %        \textbf{Argonne National Laboratory}. July 2012.
 %      \item \textbf{Huff, K.}, Bauer, T.H. ``Benchmarking a New Closed-Form Thermal Analysis Technique Against a Traditional
@@ -414,6 +486,9 @@
     % Invited Talks
     \section{\mysidestyle Significant\\Invited\\Talks}
     %\textbf{<++>}, <++>, \emph{<++>}.  \hfill\textbf{<+mo+> <+date+>, <+yy+>}\\
+    %\textbf{<++>}, <++>, \emph{<++>}.  \hfill\textbf{<+mo+> <+date+>, <+yy+>}\\
+      \textbf{SciFOO}, Google X, \emph{Invited Camper}.  \hfill\textbf{Jun 23, 2018}\\
+ %     \textbf{U. Illinois}, Hack Illinois, \emph{Keynote}.  \hfill\textbf{Feb 24, 2018}\\
       \textbf{U. Michigan}, Nuclear Engineering and Radiological Sciences \emph{Seminar}.  \hfill\textbf{Feb 9, 2018}\\
  %     \textbf{PyData}, Meetup, Ann Arbor, MI \emph{Invited Tech. Talk}.  \hfill\textbf{Feb 8, 2018}\\
       \textbf{Olin College of Engineering}, \emph{Seminar}.  \hfill\textbf{Oct 31, 2017}\\
@@ -434,7 +509,8 @@
       \textbf{U. Tennessee, Knoxville}, Nuclear Engineering, \emph{Seminar}.  \hfill\textbf{Mar 2, 2016}\\
 %      \textbf{Michigan State}, Computational, Mathematics, Science, and Engineering, \emph{Seminar}.  \hfill\textbf{Dec 15, 2015}\\
 %      \textbf{U. Illinois}, Nuclear, Plasma, \& Radiological Engineering, \emph{Seminar}.          \hfill\textbf{Dec 8, 2015}\\
-      \textbf{SC15, Austin TX}, Python in High Performance Computing workshop, \emph{Keynote}.     \hfill\textbf{Nov 15, 2015}\\
+      \textbf{SC15, Austin TX}, Python in High Performance Computing workshop, 
+      \emph{Keynote}.     \hfill\textbf{Nov 15, 2015}\vspace{-4.5mm}\\
 %      \textbf{U. Illinois}, National Center for Supercomputing Applications, \emph{Colloquium}.    \hfill\textbf{Nov 6, 2015}\\
 %      \textbf{North Carolina State University}, Nuclear Engineering, \emph{Colloquium}.            \hfill\textbf{Oct 15, 2015}\\
       %Lightning Plenary, Moore and Sloan Data Science Environment Summit.          \hfill\textbf{Oct 6, 2015}\\
@@ -446,9 +522,12 @@
     %__________________________________________________________________________________________________________________
     % Teaching Experience
 %    \section{\mysidestyle Engineering\\Teaching}
-%    \textbf{University of Illinois at Urbana-Champaign}, \hfill \textbf{Fall 2016}\\
+%    \textbf{University of Illinois at Urbana-Champaign}\\
 %    \textsc{Dept. of Nuclear, Plasma, and Radiological Engineering}\\ 
-%               \textsl{NPRE 412, Nuclear Power Economics and Fuel Management}
+%               \textsl{NPRE 412, Nuclear Power Economics and Fuel Management} \hfill \textbf{Fall 2016}\\
+%               \mbox{ }~\hfill \textbf{Fall 2017}\\
+%               \textsl{NPRE 555, Reactor Theory I} \hfill \textbf{Spring 2018}\\
+%               \textsl{NPRE 247, Modeling Nuclear Energy Systems} \hfill \textbf{Fall 2018}\\
 %               \vspace{2mm}\\
 %    \textbf{University of California, Berkeley}, \textsc{Dept. of Nuclear Engineering} \hfill \textbf{Apr 1,3,22, 2015}\\
 %               \textsl{NE 155, Introduction to Numerical Simulations in Radiation Transport}\\
@@ -514,8 +593,7 @@
 %               %UNIX Shell, Version Control, Text Editors, Databases, Auto-Documentation, Testing, Debugging
 %
 %    \section{\mysidestyle Scientific\\Computing\\Teaching}
-%    \textbf{Berkeley Institute for Data Science}, Berkeley, CA \hfill 
-%    \textbf{Jan 14--15, 2015}\\
+%    \textbf{Berkeley Institute for Data Science}, Berkeley, CA \hfill \textbf{Jan 14--15, 2015}\\
 %    Managing Databases in SQL
 %               \vspace{2mm}\\
 %    \textbf{Berkeley Institute for Data Science}, Berkeley, CA \hfill \textbf{Jun 4--5, 2015}\\
@@ -582,6 +660,9 @@
 %    \makebox[0.3\textwidth][l]{\textbf{Gwendolyn Chee}}  
 %    \makebox[0.2\textwidth][l]{MS - (est. 2020)} 
 %    \hfill MS Advisor\\
+%    \makebox[0.3\textwidth][l]{\textbf{Gregory Westphal}}  
+%    \makebox[0.2\textwidth][l]{MS - (est. 2020)} 
+%    \hfill MS Advisor\\
 %    \section{\mysidestyle Undergraduate\\Researchers}
 %    \makebox[0.3\textwidth][l]{\textsc{\underline{Name}}}  
 %    \makebox[0.2\textwidth][l]{\textsc{\underline{Degree - Year}}} 
@@ -611,6 +692,22 @@
 %    \makebox[0.3\textwidth][l]{\textbf{Xin Wen}}  
 %    \makebox[0.2\textwidth][l]{BS - (est. 2018)} 
 %    \hfill Students Pushing Innovation\\
+%    \makebox[0.3\textwidth][l]{\textbf{Daniel Chu}}  
+%    \makebox[0.2\textwidth][l]{BS - (est. 2020)} 
+%    \hfill \\
+%    \makebox[0.3\textwidth][l]{\textbf{Tyler Kennelly}}  
+%    \makebox[0.2\textwidth][l]{BS - (est. 2019)} 
+%    \hfill \\
+%    \makebox[0.3\textwidth][l]{\textbf{Bradley Ellis}}  
+%    \makebox[0.2\textwidth][l]{BS - (est. 2019)} 
+%    \hfill \\
+%    \makebox[0.3\textwidth][l]{\textbf{Adam Pichman}}  
+%    \makebox[0.2\textwidth][l]{BS - (est. 2019)} 
+%    \hfill \\
+%    \makebox[0.3\textwidth][l]{\textbf{Zo{\"e} Richter}}  
+%    \makebox[0.2\textwidth][l]{BS - (est. 2018)} 
+%    \hfill \\
+%
 %    \section{\mysidestyle Visiting\\Researchers}
 %    \makebox[0.3\textwidth][l]{\textsc{\underline{Name}}}  
 %    \makebox[0.2\textwidth][l]{\textsc{\underline{Dates}}} 
@@ -624,7 +721,7 @@
 %    \makebox[0.3\textwidth][l]{\textbf{Snehal Chandan}}  
 %    \makebox[0.2\textwidth][l]{2017} 
 %    \hfill BS - IIT, Bombay\\
-%    %__________________________________________________________________________________________________________________
+    %__________________________________________________________________________________________________________________
     % Computer Skills
 %    \section{\mysidestyle Scientific\\Computing\\Skills}
 %                \textbf{Languages} \hfill bash/csh, C++, FORTRAN, Perl, Python, XML\vspace{.5mm}\\%
@@ -637,10 +734,10 @@
     % Professional, Student Organizations
 
 
-%    \section{\mysidestyle Editing\\and\\Reviewing}
-%    \textbf{Editor} \hfill \emph{Journal of Open Source Software} \textbf{2016}\\%
-%                    \mbox{}~\hfill \emph{Proceedings of the SciPy Scientific 
-%                    Python Conference} \textbf{2013, 2015, \& 2017}\vspace{-2mm}\\%
+%    \section{\mysidestyle Editing and\\Reviewing}
+%    \textbf{Editor} \hfill \emph{Journal of Open Source Software} \textbf{2016 -- present}\\%
+%     \mbox{}~\hfill \emph{Journal of Open Source Education} \textbf{2018 -- present}\\%
+%                    \mbox{}~\hfill \emph{Proceedings of the SciPy Scientific Python Conference} \textbf{2013, 2015, \& 2017}\vspace{2mm}\\%
 %    \textbf{Manuscript Referee}~\hfill\emph{Annals of Nuclear Energy}\\%
 %                            \mbox{}~\hfill \emph{Journal of Nuclear Energy Science and Power Generation Technology} \\%
 %                            \mbox{}\hfill \emph{Nuclear Engineering and Design}\\%
@@ -653,14 +750,15 @@
 %                            \mbox{}~\hfill\emph{Alfred P. Sloan Foundation}\vspace{2mm}\\%
 %    \textbf{Book Proposal Referee} \hfill\emph{O'Reilly Media}\\%
 %                            \mbox{}\hfill\emph{Elsevier}\vspace{2mm}\\%
-    \section{\mysidestyle Professional\\Service}
-%		\textbf{Co-Organizer}, Technical Workshop on Fuel Cycle Simulation \hfill \textbf{2017}\vspace{.5mm}\\%
+    \section{\mysidestyle Selected\\Professional\\Service}
+    \textbf{Past Chair} \emph{(ex officio)}, Fuel Cycle \& Waste Management Division, ANS  \hfill \textbf{2016--2017}\vspace{.5mm}\\%
+		\textbf{Co-Organizer}, Technical Workshop on Fuel Cycle Simulation \hfill \textbf{2017}\vspace{.5mm}\\%
 		\textbf{Technical Program Committee}, IHLRWM Conference \hfill \textbf{2017}\vspace{.5mm}\\%
 		\textbf{Chair}, Fuel Cycle \& Waste Management Division, ANS  \hfill \textbf{2016--2017}\vspace{.5mm}\\%
 		\textbf{Vice Chair}, Fuel Cycle \& Waste Management Division, ANS  \hfill \textbf{2015--2016}\vspace{.5mm}\\%
 		\textbf{Chair}, Steering Committee, Software Carpentry Foundation   \hfill \textbf{2014--2015}\vspace{.5mm}\\%
-		\textbf{Secretary--Treasurer}, Fuel Cycle \& Waste Management Division, ANS  \hfill \textbf{2013--2015}\vspace{.5mm}\\%
-		\textbf{Secretary}, Young Members Group, ANS  \hfill \textbf{2013--2014}%
+%		\textbf{Secretary--Treasurer}, Fuel Cycle \& Waste Management Division, ANS  \hfill \textbf{2013--2015}\vspace{.5mm}\\%
+%		\textbf{Secretary}, Young Members Group, ANS  \hfill \textbf{2013--2014}%
 %		\textbf{Technical Program Co-Chair}, SciPy, Scientific Python Conference   \hfill \textbf{2013--2014}\vspace{.5mm}\\%
 %		\textbf{Member}, Next Generation Leadership Committee, Waste Management Symposium  \hfill \textbf{2013--2014}\vspace{.5mm}\\%
 %		\textbf{Moderator, Organizer, Panelist}, inSCIght Scientific Computing Podcast  \hfill \textbf{2011--2013}\vspace{.5mm}\\%
@@ -669,11 +767,30 @@
 %		\textbf{Governor, Treasurer}, University of Wisconsin ANS student section  \hfill \textbf{2008--2010}\vspace{.5mm}%
     %__________________________________________________________________________________________________________________
 %    \section{\mysidestyle Departmental\\Service}
-%		\textbf{Graduate Committee}, Admissions Sub-Committee \hfill \textbf{2017}\vspace{.5mm}\\%
-%		\textbf{Faculty Advisor}, UIUC ANS Student Section \hfill \textbf{2016--2017}\vspace{.5mm}\\%
-%    \section{\mysidestyle Other\\University\\Service}
+%		\textbf{Graduate Committee}, Qualifying Exam Sub-Committee \hfill \textbf{Fall 2017}\vspace{.5mm}\\%
+%                                             Qualifying Exam Sub-Committee \hfill \textbf{Fall 2017}\vspace{.5mm}\\%
+%                                             Admissions Sub-Committee \hfill \textbf{Spring 2017}\vspace{.5mm}\\%
+%                                             Admissions Sub-Committee \hfill \textbf{Fall 2016}\vspace{.5mm}\\%
+%		\textbf{Advisory Committee}, \hfill \textbf{2017--2018}\vspace{.5mm}\\%
+%		\textbf{Faculty Search Committee}, \hfill \textbf{2017--2018}\vspace{.5mm}\\%
+%		\textbf{Faculty Advisor}, UIUC ANS Student Section \hfill \textbf{2016--2018}\vspace{.5mm}\\%
+%		\textbf{Faculty Advisor}, UIUC WiN Student Section \hfill \textbf{2017--2018}\vspace{.5mm}\\%
+%    \section{\mysidestyle College\\Service}
+%		\textbf{Member}, Instructional Facility Working Group \hfill \textbf{2017--2018}\vspace{.5mm}\\%
 %		\textbf{Faculty Advisor}, UIUC CSE The Hacker Within Scientific Computing Group \hfill \textbf{2016--2017}\vspace{.5mm}\\%
+%    \section{\mysidestyle Campus\\Service}
+%                \textbf{Steering Committee Member}, Illinois Data Science Initiative \hfill \textbf{2018}\vspace{.5mm}\\%
 %		\textbf{Hack Mentor}, Hack Illinois \hfill \textbf{2017}\vspace{.5mm}\\%
+%
+%    %__________________________________________________________________________________________________________________
+%    % Consulting 
+%    \section{\mysidestyle Consulting}
+%
+%
+%    \textbf{Thomas Edison State University} Trenton, NJ \hfill \textbf{2018}\\
+%    \textsl{Subject Matter Expert} \\ 
+%    Institute of Nuclear Power Operations (INPO) Academic Program Review\\
+%
     %__________________________________________________________________________________________________________________
     % References
 
