@@ -3,7 +3,10 @@
 
 \documentclass[margin,line]{resume}
 \usepackage{bibentry}
+\makeatletter\let\saved@bibitem\@bibitem\makeatother
 \usepackage{hyperref}
+\makeatletter\let\@bibitem\saved@bibitem\makeatother
+\usepackage{doi}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -15,10 +18,21 @@
 %\textheight=10.75in
 \newcommand{\Cyclus}{\textsc{Cyclus}\xspace}%
 
+% Trying to bold my name in the bib
+\usepackage{xstring}
+\def\FormatName#1{%
+  \IfSubStr{#1}{Huff}{\textbf{#1}}{#1}%
+}
+
+
 %______________________________________________________________________________________________________________________
 \begin{document}
 \name{\Large Kathryn D. Huff}
 \begin{resume}
+
+%\bibliographystyle{katyunsrt}
+\bibliographystyle{abbrvurl-huff}
+\nobibliography{cv}
 
     % Contact Information
     \section{\mysidestyle Contact\\Information}
@@ -117,6 +131,11 @@
     %__________________________________________________________________________________________________________________
     % Grants Awarded
     \section{\mysidestyle Grants\\Awarded}
+    \textbf{Evaluation of micro-reactor requirements and performance in an 
+    existing \\
+    well-characterized micro-grid} \hfill \textsl{Period:} 2020--2022\\
+    \textsl{Source:} DOE-NEUP \hfill \textsl{Award Total:} \textbf{\$800,000}\\
+    \textsl{Role:} Co-PI \hfill \textsl{Huff Allocation:} \textbf{\$265,000}\vspace{2mm}\\%
     \textbf{Enabling Load Following Capability in the Transatomic Power MSR} \hfill \textsl{Period:}
     2018--2021\\
     \textsl{Source:} ARPA - E - MEITNER \hfill \textsl{Award Total:} \textbf{\$999,694}\\
@@ -171,134 +190,37 @@
                \vspace{-2mm}
     \section{\mysidestyle Books}
       \begin{bibenum}
-      \item Scopatz, A., \textbf{Huff, K.}. ``Effective Computation in
-      Physics: Field Guide to Research in Python'' O'Reilly Media.
-      \href{shop.oreilly.com/product/0636920033424.do}{ISBN:978-1491901533},
-      2015.
+      \item \bibentry{scopatz_effective_2015}
       \end{bibenum}
 
     \section{\mysidestyle Book\\Chapters}
       \begin{bibenum}
-      \item \textbf{Huff, K.}. ``Chapter One - Economics of Advanced Reactors and Fuel
-              Cycles,'' in Storage and Hybridization of Nuclear Energy, 1st
-              ed., Hitesh Bindra, Ed. Elsevier S\&T Books.
-              \url{https://doi.org/10.1016/B978-0-12-813975-100001-6}, 2019.
-      \item \textbf{Huff, K.}. ``Case Study: Cyclus Project,'' in The Practice
-              of Reproducible Research, 1st ed., Justin Kitzes, Fatma Imamoglu,
-              and Daniel Turek, Eds. University of California, Berkeley:
-              University of California Press.
-              \href{https://www.ucpress.edu/book.php?isbn=9780520294752}{ISBN:9780520294752}, 2017.
-      \item \textbf{Huff, K.}. ``Lessons Learned,'' in The Practice of Reproducible
-              Research, 1st ed., Justin Kitzes, Fatma Imamoglu, and Daniel
-              Turek, Eds. University of California, Berkeley: University of
-              California Press.
-              \href{https://www.ucpress.edu/book.php?isbn=9780520294752}{ISBN:9780520294752}, 2017.
+      \item \bibentry{huff_chapter_2019}
+      \item \bibentry{huff_case_2017}
+      \item \bibentry{huff_lessons_2017}
       \end{bibenum}
 
     \section{\mysidestyle Journal\\Publications}
     %\section{\mysidestyle Refereed\\Journal\\Publications} % also, vspace below
       \begin{bibenum}
-      \item Ashraf, O., Rykhlevskii, A., Tikhomirov, G.V., \textbf{Huff, K.}.
-              ``Strategies for thorium fuel cycle transition in the SD-TMSR.''
-              \textbf{Annals of Nuclear Energy} Volume 148.
-              \url{https://doi.org/10.1016/j.anucene.2020.107656}. December
-              2020.
-      \item Miernicki, E.A., Heald, A.L., \textbf{Huff, K.}, Brooks, C.S.,
-              Margenot, A.J. ``Nuclear waste heat use in agriculture: History
-              and opportunities in the United States.'' \textbf{Journal of
-              Cleaner Production}.
-              \url{https://doi.org/10.1016/j.jclepro.2020.121918}. September
-              2020.
-      \item Chee, G.J., Agosta, R.E.F., Bae, J.W., Flanagan, R.R., Scopatz,
-              A.M., \textbf{Huff, K.} ``Demand-Driven Deployment Capabilities
-              in Cyclus, a Fuel Cycle Simulator.'' \textbf{Nuclear Technology}
-              \url{https://doi.org/10.1080/00295450.2020.1753444}. July 2020.
-      \item Bae, J.W., Rykhlevskii, A., Chee, G., \textbf{Huff, K.} ``Deep
-              learning approach to nuclear fuel transmutation in a fuel cycle
-              simulator.'' \textbf{Annals of Nuclear Energy}, Volume 139.
-              \url{https://doi.org/10.1016/j.anucene.2019.107230}. May 2020.
-      \item Ashraf, O., Rykhlevskii, A., Tikhomirov, G.V., \textbf{Huff,
-              K.D.}, ``Whole core analysis of the single-fluid double-zone
-              thorium molten salt reactor (SD-TMSR)'' \textbf{Annals of Nuclear
-              Energy}, 137, 107-115.
-              \url{https://doi.org/10.1016/j.anucene.2019.107115}. March 2020.
-      \item Kamuda, M., Zhao, J., \textbf{Huff, K.} ``A comparison of machine
-              learning methods for automated gamma-ray spectroscopy.''
-              \textbf{Nuclear Instruments and Methods in Physics Research
-              Section A: Accelerators, Spectrometers, Detectors and Associated
-              Equipment, Symposium on Radiation Measurements and Applications
-              XVII} \url{https://doi.org/10.1016/j.nima.2018.10.063}. February
-              2020.
-      \item Bae, J. W., Singer, C.E., and Huff, K. D. ``Synergistic
-              Spent Nuclear Fuel Dynamics Within the European Union''
-              \textbf{Progress in Nuclear Energy}, Accepted, 2019.
-      \item Bae, J. W., Peterson-Droogh, J. L., and Huff, K. D. ``Standardized
-              Verification of the Cyclus Fuel Cycle Simulator'' \textbf{Annals
-              of Nuclear Energy}, Volume 128, Pages 288-291.
-              \url{https://doi.org/10.1016/j.anucene.2019.01.014}. Jun. 2019
-      \item Rykhlevskii, A., Bae, J. W., and Huff, K. D. ``Modeling and
-              Simulation of Online Reprocessing in the Thorium-Fueled Molten
-              Salt Breeder Reactor'' \textbf{Annals of Nuclear Energy}, Volume 128,
-              Pages 366-379.
-              \url{https://doi.org/10.1016/j.anucene.2019.01.030}. Jun. 2019.
-      \item  Kamuda, M., Zhao, J., \textbf{Huff, K.} ``A Comparison of Machine
-              Learning Methods for Automated Gamma-Ray Spectroscopy''
-              \textbf{Nuclear Instruments and Methods in Physics Research}
-              Section A: Accelerators, Spectrometers, Detectors and Associated
-              Equipment, \url{https://doi.org/10.1016/j.nima.2018.10.063}, Oct.
-              2018.
-       \item Lindsay, A., Ridley, G., Rykhlevskii, A., \textbf{Huff, K.}
-               ``Introduction to Moltres: an Application for Simulation of
-               Molten Salt Reactors'',  \textbf{Annals of Nuclear Energy},
-               \url{https://doi.org/10.1016/j.anucene.2017.12.025},
-               Apr. 2018.
-       \item Smith, A.M., Niemeyer, K.E., Katz, D.S., Barba, L. A., Githinji,
-               G., Gymrek, M., \textbf{Huff, K.} et al.
-              2018. ``Journal Of Open Source Software (JOSS): Design and
-              First-Year Review.'' \textbf{PeerJ Computer Science} 4: e147.
-              \url{https://doi.org/10.7717/peerj-cs.147}. Feb. 2018.
-       \item Lindsay, A., \textbf{Huff, K.}
-               ``Moltres: finite element based simulation of molten salt
-               reactors'',  \textbf{The Journal of Open Source Software},
-               \url{https://doi.org/10.21105/joss.00298}, Jan. 2018.
-      \item Allen, A., Aragon, C., Becker, C., Carver, J., Chis, A., Combemale,
-              B., Croucher, M., Crowston, K., Garijo, D., Gehani, A., Goble,
-              C., Haines, R., Hirschfeld, R., Howison, J., \textbf{Huff, K.},
-              Jay, C., Katz, D.S., Kirchner, C., Kuksenok, K., L\"{a}mmel, R.,
-              Nierstrasz, O., Turk, M., Nieuwpoort, R. van, Vaughn, M., Vinju,
-              J.J., ``Engineering Academic Software (Dagstuhl Perspectives
-              Workshop 16252).'' \textbf{Dagstuhl Manifestos} 6, 1–20.
-              \url{https://doi.org/10.4230/DagMan.6.1.1}, 2017.
-       \item \textbf{Huff,~K.} ``Rapid Methods for Radionuclide Contaminant
-               Transport in Nuclear Fuel Cycle Simulation'', \textbf{Advances
-               in Engineering Software},
-               \url{https://doi.org/10.1016/j.advengsoft.2017.07.006}, Dec. 2017.
-      \item Andreades,~C., Cisneros,~A.T., Choi,~J.K., Chong,~A.Y.,
-              Fratoni,~M., Hong,~S., Huddar,~L.R., \textbf{Huff,~K.}, Kendrick,~J.,
-              Krumwiede,~D.L., Laufer,~M., Munk,~M., Scarlat,~R.O., Wang,~X.,
-              Zwiebaum,~N., Greenspan,~E. and P. Peterson.  ``Design Summary of
-              the Mark-I Pebble-Bed, Fluoride Salt–Cooled, High-Temperature
-              Reactor Commercial Power Plant,'' \textbf{Nuclear Technology},
-              vol. 195, no. 3, pp. 222-238,
-              \url{https://doi.org/10.13182/NT16-2},
-              Sep. 2016.
-       \item \textbf{Huff,~K.}, Gidden,~M., Carlsen,~R., Flanagan,~R.,
-               McGarry,~M., Opotowsky,~A., Schneider,~E., Scopatz,~A.,
-               Wilson,~P.  ``Fundamental Concepts in the \Cyclus Nuclear Fuel
-               Cycle Simulation Framework.'' \textbf{Advances in Engineering
-               Software}, vol. 94, pp. 46–59,
-               \url{https://doi.org/10.1016/j.advengsoft.2016.01.014},
-               Apr. 2016.
-       \item Aruliah,~D.A., Brown,~C.T., Chue Hong,~N.P., Davis,~M., Guy,~R.T.,
-               Haddock,~S.H.D., \textbf{Huff,~K.}, Mitchell,~I., Plumbley,~M.,
-               Waugh,~B., White,~E.P., Wilson,~G.V., and Wilson,~P.P.H.  ``Best
-               Practices For Scientific Computing.'' \textbf{PLOS Biology}, Vol
-               1, Issue 12, \url{https://dx.doi.org/10.1371/journal.pbio.1001745},
-               2014.
-       \item Clerc, M., Dunstan, J., \textbf{Huff, K.}, Mujica, N., Varas, G.
-               ``Liquid-Solid-Like Transition in Quasi-One-Dimensional Driven
-               Granular Media '',  \textbf{Nature Physics}, Vol 4, 249 - 254,
-               \url{https://doi.org/10.1038/nphys884}, 2008.
+      \item \bibentry{ashraf_strategies_2020}
+      \item \bibentry{miernicki_nuclear_2020}
+      \item \bibentry{chee_demand-driven_2020}
+      \item \bibentry{bae_deep_2020}
+      \item \bibentry{ashraf_whole_2020}
+      \item \bibentry{kamuda_comparison_2020}
+      \item \bibentry{bae_synergistic_2019}
+      \item \bibentry{bae_standardized_2019}
+      \item \bibentry{rykhlevskii_modeling_2019}
+      \item \bibentry{lindsay_introduction_2018}
+      \item \bibentry{smith_journal_2018}
+      \item \bibentry{lindsay_moltres_2018}
+      \item \bibentry{allen_engineering_2017}
+      \item \bibentry{huff_rapid_2017}
+      \item \bibentry{andreades_design_2016}
+      \item \bibentry{huff_fundamental_2016}
+      \item \bibentry{wilson_best_2014}
+      \item \bibentry{clerc_liquid-solid-like_2008}
       \end{bibenum}
       %\vspace{2mm} % add this back if you return to Refereed Journal..
       %\section{\mysidestyle Submitted}
@@ -306,86 +228,29 @@
       %\end{bibenum}
     \section{\mysidestyle Refereed\\Conference\\Proceedings}
     \begin{bibenum}
-    \item Betzler, B.R., Rykhlevskii, A., Worrall, A., \textbf{Huff, K.}.
-            ``Impacts of Fast-Spectrum Molten Salt Reactor Characteristics on
-            Fuel Cycle Performance,'' 
-            \textbf{Proceedings of GLOBAL International Fuel Cycle Conference.}
-            American Nuclear Society, Seattle, WA, September 2019.
-    \item Chee, G., Bae, J.W., \textbf{Huff, K.}, Flanagan, R.R., Fairhurst, 
-            R. ``Demonstration of Demand-Driven Deployment Capabilities in 
-            Cyclus'' 
-            \textbf{Proceedings of GLOBAL International Fuel Cycle Conference.}
-            American Nuclear Society, Seattle, WA, September 2019.
-    \item Flanagan, R.R., Bae, J.W., \textbf{Huff, K.}, Chee, G.J., 
-            Fairhurst, R.,  ``Methods for Automated Fuel Cycle Facility 
-            Deployment''
-            \textbf{Proceedings of GLOBAL International Fuel Cycle Conference.}
-            American Nuclear Society, Seattle, WA, September 2019.
-    \item Park, S.M., Rykhlevskii, A., \textbf{Huff, K.}, ``Safety Analysis 
-            of the Molten Salt Fast Reactor Fuel Composition using Moltres,''
-            \textbf{Proceedings of GLOBAL International Fuel Cycle Conference.}
-            American Nuclear Society, Seattle, WA, September 2019.
-    \item Rykhlevskii, A., Betzler, B.R., Worrall, A., \textbf{Huff, K.}, 
-            ``Fuel Cycle Performance of Fast Spectrum Molten Salt Reactor 
-            Designs, \textbf{Proceedings of Mathematics and Computation}. 
-            American Nuclear Society, Portland, OR. August 2019.
-    \item Westphal, G., \textbf{Huff, K.}, ``PyRe: A Cyclus 
-            Pyroprocessing Facility Archetype, \textbf{2018 
-            Advances in Nuclear Nonproliferation Technology and Policy} 
-            iAmerican Nuclear Society, Orlando, FL. November 2018.
-    \item Niemeyer, K., Smith, A., Barba, L., Githinji, G., Gymrek, M.,
-            \textbf{Huff, K.}, Katz, D., Madan, C., Cabunoc, A. ``Introducing
-            JOSS: The Journal of Open Source Software'' \textbf{Scientific
-            Computing with Python Conference (SciPy 2017)}, Austin, TX. July
-            2017.
-    \item \textbf{Huff, K.}, Bae, J., Mummah, K., Flanagan, R., Scopatz, A.
-            ``Current Status of Predictive Transition Capability in Fuel Cycle
-            Simulation'' \textbf{GLOBAL 2017 International Nuclear Fuel Cycle
-            Conference}, Seoul, South Korea. September 2017.
-      \item Bae, J., Roy, W., \textbf{Huff, K.}.
-            ``Benefits of Siting a Borehole Repository on Non-Operating Nuclear
-            Facility'' Paper 19727.  \textbf{International High-Level Radioactive
-            Waste Management Converence (IHLRWM 2017)},
-            Charlotte, NC. April 2017.
-      \item Wang, X., \textbf{Huff, K.}, Aufiero, M., Peterson, P., Fratoni, M.
-            ``Coupled reactor kinetics and heat transfer model for nuclear
-            reactor transient analysis.'' Paper 60728.  \textbf{24th
-            International Conference on Nuclear Engineering (ICONE24)},
-            Charlotte, NC.  June 2016.
-      \item Wang, X., \textbf{Huff, K.}, Aufiero, M., Peterson, P., Fratoni, M.
-            ``A sensitivity study of a coupled kinetics and thermal-hydraulics
-            model for Fluoride-salt-cooled, High-temperature Reactor (FHR)
-            transient analysis.'' \textbf{The International
-            Congress on Advances in Nuclear Power Plants (ICAPP)}, San
-            Francisco, CA. April 2016.
-      \item Greenberg, H., Fratoni, M., Djokic, D., \textbf{Huff, K.},
-         Nibbelink, R., Scopatz, A. ``The Application of CYCLUS to Fuel Cycle
-         Transition Modeling'' Paper 5061.
-         \textbf{Proceedings of Global}, Paris, France. September 2015.
-      \item \textbf{Huff, K.}, ``PyRK: Python for Reactor Kinetics.''
-         \textbf{Proceedings of the 14th Python in Science Conference}, Austin,
-         TX. July 2015.
-      \item Krumwiede, D.L., Andreades, C., Choi, J.K., Cisneros, A.T., Huddar, L.,
-         \textbf{Huff, K.}, Laufer, M.D., Munk, M., Scarlat, R.O., Seifried, J.E.,
-         Zweibaum, N., Greenspan, E., Peterson, P.F.  ``Design of the Mark-I
-         Pebble-Bed, Fluoride-Salt-Cooled, High-Temperature Reactor Commercial Power
-         Plant,'' Paper 14231.  \textbf{Proceedings of ICAPP}, Charlotte, NC. April 2014.
-      \item \textbf{Huff, K.} ``\Cyclus Fuel Cycle Simulation Capabilities with the Cyder Disposal System Model,'' Paper 7730.
-         \textbf{Proceedings of Global}, Salt Lake City, UT. October 2013.
-      \item Gidden, M., Wilson, P., \textbf{Huff, K.}, Carlsen, R. ``An Agent-Based Framework for Fuel Cycle Simulation with Recycling,'' Paper 7737.
-         \textbf{Proceedings of Global}, Salt Lake City, UT. October 2013.
-      \item \textbf{Huff, K.}, Nutt, M. ``Hydrologic Nuclide Transport Models in Cyder, a Geologic Disposal Software Library,'' Paper 13328.
-         \textbf{Proceedings of the Waste Management Symposium}, Phoenix, AZ.  February 2013.
-      \item Oliver, K.M., Wilson, P.P.H., Reveillere, A., \textbf{Huff, K.} ``Studying international fuel cycle robustness with the GENIUSv2 discrete
-          facilities/materials fuel cycle systems analysis tool '', Paper 9166.
-          \textbf{Proceedings of Global}, Paris, France. 2009.
-      \item Rochman, D., Haight, R. C., Wender, S. A., O'Donnell, J. M.,
-        Michaudon, A., \textbf{Huff, K.}, Vieira, D. J., Bond, E., Rundberg, R.S.,
-        Kronenberg, A., Wilhelmy, J., Bredeweg, T. A., Schwantes, J., Ethvignot, T.,
-        Granier, T., Petit, M., Danon, Y.
-        ``First Measurements with a Lead Slowing-Down Spectrometer at LANSCE,''
-        \textbf{AIP Conference Proceedings, International Conference on Nuclear
-        Data for Science and Technology.} Volume 769. 2005.
+    %\item \bibentry{<++>}
+    \item \bibentry{betzler_impacts_2019}
+    \item \bibentry{chee_demonstration_2019}
+    \item \bibentry{flanagan_methods_2019}
+    \item \bibentry{park_safety_2019}
+    \item \bibentry{rykhlevskii_fuel_2019}
+    \item \bibentry{westphal_pyre_2018}
+    \item \bibentry{smith_introducing_2017}
+    \item \bibentry{smith_journal_2017}
+    \item \bibentry{huff_current_2017}
+    \item \bibentry{bae_benefits_2017}
+    \item \bibentry{wang_coupled_2016}
+    \item \bibentry{wang_sensitivity_2016}
+    \item \bibentry{djokic_application_2015}
+    \item \bibentry{huff_pyrk:_2015}
+    \item \bibentry{krumwiede_design_2014}
+    \item \bibentry{huff_cyclus_2013}
+    \item \bibentry{gidden_agent-based_2013}
+    \item \bibentry{huff_hydrologic_2013}
+    \item \bibentry{huff_cyclus_2011}
+    \item \bibentry{oliver_studying_2009}
+    \item \bibentry{mujica_solid-liquid-like_2008}
+    \item \bibentry{rochman_first_2005}
           % [paper]
     \end{bibenum}
     %__________________________________________________________________________________________________________________
@@ -397,6 +262,42 @@
     % Conference Publications
     \section{\mysidestyle Refereed\\Conference\\Abstracts}
     \begin{bibenum}
+     \item \bibentry{dotson_optimal_2020}
+     \item \bibentry{turkmen_single_2020}
+     \item \bibentry{fairhurst_agosta_hydrogen_2020}
+     \item \bibentry{fairhurst_agosta_hydrogen_2020-1}
+     \item \bibentry{chaube_dynamic_2019}
+     \item \bibentry{chee_demonstration_2019}
+     \item \bibentry{park_safety_2019}
+     \item \bibentry{rykhlevskii_impact_2019}
+     \item \bibentry{hague_comparison_2019}
+     \item \bibentry{chee_simulation_2019}
+     \item \bibentry{westphal_signatures_2018}
+     \item \bibentry{chee_validation_2018}
+     \item \bibentry{bae_impact_2018}
+     \item \bibentry{chaube_dynamic_2018}
+     \item \bibentry{kamuda_comparison_2018}
+     \item \bibentry{chee_numerical_2018}
+     \item \bibentry{kissinger_simulating_2018}
+     \item \bibentry{rykhlevskii_online_2017}
+     \item \bibentry{rykhlevskii_full-core_2017}
+     \item \bibentry{ridley_introduction_2017}
+     \item \bibentry{bae_synergistic_2017}
+     \item \bibentry{scopatz_modernizing_2015}
+     \item \bibentry{bates_pyne_2014}
+     \item \bibentry{huff_extensions_2014}
+     \item \bibentry{huff_dynamic_2013}
+     \item \bibentry{huff_numerical_2012}
+     \item \bibentry{scopatz_pyne:_2012}
+     \item \bibentry{gidden_once-through_2012}
+     \item \bibentry{huff_key_2012}
+     \item \bibentry{huff_cyclus_2011}
+     \item \bibentry{huff_rapid_2011}
+     \item \bibentry{huff_open_2011}
+     \item \bibentry{huff_mox_2010}
+     \item \bibentry{elmore_geniusv2_2009}
+     \item \bibentry{huff_geniusv2_2009}
+     \item \bibentry{huff_genius_2009}
     \item Rykhlevskii, A., \textbf{Huff, K.} ``Computational Tools for Advanced
             Molten Salt Reactor Simulation'', \textbf{Blue Waters Symposium},
             Sun River, OR, June 2018.
