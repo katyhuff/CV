@@ -4,14 +4,16 @@
 \documentclass[margin,line]{resume}
 \usepackage{bibentry}
 \makeatletter\let\saved@bibitem\@bibitem\makeatother
-\usepackage{hyperref}
+\usepackage[breaklinks]{hyperref}
+\def\UrlBreaks{\do\/\do-}
 \makeatletter\let\@bibitem\saved@bibitem\makeatother
 \usepackage{doi}
 \hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=cyan,
+    colorlinks=true,%
+    linkcolor=blue,%
+    filecolor=magenta,%
+    urlcolor=cyan,%
+    breaklinks=true
 }
 \urlstyle{same}
 \usepackage{xspace}
@@ -134,12 +136,12 @@
     \textbf{Evaluation of micro-reactor requirements and performance in an 
     existing \\
     well-characterized micro-grid} \hfill \textsl{Period:} 2020--2022\\
-    \textsl{Source:} DOE-NEUP \hfill \textsl{Award Total:} \textbf{\$800,000}\\
+    \textsl{Source:} DOE-NEUP \hfill \textsl{Award Total:} \$800,000\\
     \textsl{Role:} Co-PI \hfill \textsl{Huff Allocation:} \textbf{\$265,000}\vspace{2mm}\\%
     \textbf{Enabling Load Following Capability in the Transatomic Power MSR} \hfill \textsl{Period:}
     2018--2021\\
     \textsl{Source:} ARPA - E - MEITNER \hfill \textsl{Award Total:} \textbf{\$999,694}\\
-    \textsl{Role:} \textbf{Principal Investigator} \hfill \textsl{Huff Allocation:} \textbf{\$205,000}\vspace{2mm}\\%
+    \textsl{Role:} \textbf{Principal Investigator} \hfill \textsl{Huff Allocation:} \$205,000\vspace{2mm}\\%
     \textbf{US Research Software Sustainability Institute (URSSI)} \hfill \textsl{Period:}
     2017--2018\\
     \textsl{Source:} NSF - OAC - SI2 - S2I2 Conceptualization \hfill \textsl{Award Total:} \$499,999\\
@@ -159,7 +161,7 @@
     \textsl{Role:} UIUC PI, Thrust Area Lead  \hfill \textsl{Huff Allocation:} \textbf{\$648,000}\vspace{2mm}\\%
     \textbf{Collaborative, Open-Source Curriculum Development} \hfill \textsl{Period:} 2017--2018\\
     \textsl{Source:} UIUC Strategic Instructional Innovations Program\hfill \textsl{Award Total:} \$19,347\\
-    \textsl{Role:} PI \hfill \textsl{Huff Allocation:} \textbf{\$13,000}\vspace{2mm}\\%
+    \textsl{Role:} \textbf{Principal Investigator}  \hfill \textsl{Huff Allocation:} \textbf{\$13,000}\vspace{2mm}\\%
     \textbf{REU Site: INCLUSION at U. Illinois} \hfill \textsl{Period:}
     2017--2020\\
     \textsl{Source:} NSF - ACI \hfill \textsl{Award Total:} \$380,036\\
@@ -203,6 +205,7 @@
     \section{\mysidestyle Journal\\Publications}
     %\section{\mysidestyle Refereed\\Journal\\Publications} % also, vspace below
       \begin{bibenum}
+      \item \bibentry{ashraf_preliminary_2021}
       \item \bibentry{ashraf_strategies_2020}
       \item \bibentry{miernicki_nuclear_2020}
       \item \bibentry{chee_demand-driven_2020}
@@ -262,221 +265,126 @@
     % Conference Publications
     \section{\mysidestyle Refereed\\Conference\\Abstracts}
     \begin{bibenum}
-     \item \bibentry{dotson_optimal_2020}
-     \item \bibentry{turkmen_single_2020}
-     \item \bibentry{fairhurst_agosta_hydrogen_2020}
-     \item \bibentry{fairhurst_agosta_hydrogen_2020-1}
-     \item \bibentry{chaube_dynamic_2019}
-     \item \bibentry{chee_demonstration_2019}
-     \item \bibentry{park_safety_2019}
-     \item \bibentry{rykhlevskii_impact_2019}
-     \item \bibentry{hague_comparison_2019}
-     \item \bibentry{chee_simulation_2019}
-     \item \bibentry{westphal_signatures_2018}
-     \item \bibentry{chee_validation_2018}
-     \item \bibentry{bae_impact_2018}
-     \item \bibentry{chaube_dynamic_2018}
-     \item \bibentry{kamuda_comparison_2018}
-     \item \bibentry{chee_numerical_2018}
-     \item \bibentry{kissinger_simulating_2018}
-     \item \bibentry{rykhlevskii_online_2017}
-     \item \bibentry{rykhlevskii_full-core_2017}
-     \item \bibentry{ridley_introduction_2017}
-     \item \bibentry{bae_synergistic_2017}
-     \item \bibentry{scopatz_modernizing_2015}
-     \item \bibentry{bates_pyne_2014}
-     \item \bibentry{huff_extensions_2014}
-     \item \bibentry{huff_dynamic_2013}
-     \item \bibentry{huff_numerical_2012}
-     \item \bibentry{scopatz_pyne:_2012}
-     \item \bibentry{gidden_once-through_2012}
-     \item \bibentry{huff_key_2012}
-     \item \bibentry{huff_cyclus_2011}
-     \item \bibentry{huff_rapid_2011}
-     \item \bibentry{huff_open_2011}
-     \item \bibentry{huff_mox_2010}
-     \item \bibentry{elmore_geniusv2_2009}
-     \item \bibentry{huff_geniusv2_2009}
-     \item \bibentry{huff_genius_2009}
-    \item Rykhlevskii, A., \textbf{Huff, K.} ``Computational Tools for Advanced
-            Molten Salt Reactor Simulation'', \textbf{Blue Waters Symposium},
-            Sun River, OR, June 2018.
-    \item Bae, J. W., \textbf{Huff, K.}, Singer,C. ``Synergistic Spent Nuclear Fuel Dynamics Within the European Union''
-            \textbf{Transactions of the American Nuclear Society Winter Conference.}
-            Washington, DC, November 2017.
-    \item Rykhlevskii, A., Lindsay, A., \textbf{Huff, K.} ``Full-core analysis of thorium-fueled Molten Salt Breeder Reactor using the SERPENT 2 Monte Carlo code''
-            \textbf{Transactions of the American Nuclear Society Winter Conference.}
-            Washington, DC, United States, November 2017.
-    \item Rykhlevskii, A., Lindsay, A., \textbf{Huff, K.} ``Online reprocessing simulation for thorium-fueled molten salt breeder reactor,''
-            \textbf{Transactions of the American Nuclear Society Winter Conference.}
-            Washington, DC, United States, November 2017.
-    \item Ridley, G., Lindsay, A., and \textbf{Huff, K.} ``An
-            Introduction To Moltres, an MSR Multiphysics Code.'' \textbf{Transactions
-            of the American Nuclear Society Winter Conference}. Washington
-            D.C., United States, November 2017.
-      \item \textbf{Huff, K.}, Scopatz, A. ``Modernizing Computational Nuclear Engineering Education -- In the Open''
-         \textbf{Transactions of the American Nuclear Society Winter Conference.}
-         Washington, DC. November 2015.
-      \item \textbf{Huff, K.}, Fratoni, M., Greenberg, H. ``Extensions to the CYCLUS Ecosystem in Support of Market-Driven Transition Capability''
-         \textbf{Transactions of the American Nuclear Society Winter Conference.}
-         Anaheim, CA. November 2014.
-      \item Bates, C., Biondo, E., \textbf{Huff, K.}, Kiesling, K., Scopatz, A. ``PyNE Progress Report''
-         \textbf{Transactions of the American Nuclear Society Winter Conference.}
-         Anaheim, CA. November 2014.
-      \item \textbf{Huff, K.}, Bara, A. ``Dynamic Determination of Thermal Repository Capacity For Fuel Cycle Analysis.''
-         \textbf{Transactions of the American Nuclear Society Annual Conference.}
-         Atlanta, GA. June 2013.
-      \item \textbf{Huff, K.}, Nutt, M. ``Key Processes and Parameters in a Generic Clay Disposal System Model.''
-         \textbf{Transactions of the American Nuclear Society Winter Conference.}
-        San Diego, CA. November 2012.
-        % [paper][talk]
-      \item Scopatz, A.M., Romano, P.K., Wilson, P.P.H., \textbf{Huff, K.} ``PyNE: Python For Nuclear Engineering.''
-         \textbf{Transactions of the American Nuclear Society Winter Conference.}
-        San Diego, CA. November 2012.
-        % [paper][talk]
-      \item \textbf{Huff, K.}, Bauer, T. ``Numerical Calibration of an Analytical Generic Nuclear Repository Heat Transfer Model.''
-         \textbf{Transactions of the American Nuclear Society Annual Conference.}
-        Chicago, IL. June 2012.
-        % [paper][talk]
-      \item \textbf{Huff, K.}, Gidden, M., Wilson, P.P.H. ``Open architecture and modular paradigm of \Cyclus, a fuel cycle simulation code.''
-         \textbf{Transactions of the American Nuclear Society Annual Conference.}
-        Hollywood, FL. June 2011.
-        % [paper][talk]
-      \item \textbf{Huff, K.}, Scopatz, A., Preston, N., Wilson, P.P.H. ``Rapid Peer Education of a Computational Nuclear Engineering Skill Suite.''
-         \textbf{Transactions of the American Nuclear Society Annual Conference.}
-        Hollywood, FL. June 2011.
-        % [paper][talk]
-      \item \textbf{Huff, K.} ``\Cyclus: An Open, Modular, Next Generation Fuel Cycle Simulator Platform. ''
-        (poster)  \textbf{Waste Management Symposium.} Phoenix, AZ. March
-        2011.
-        % [poster][award]
-      \item \textbf{Huff, K.}, ``MOX Fuel Recipe Approximation Tests in GENIUSv2. ''
-         \textbf{Proceedings of the American Nuclear Society Student Conference.}
-        Ypsilanti, MI. April 2010.
-        % [paper][talk]
-      \item \textbf{Huff, K.}, Oliver, K., Wilson, P.P.H. ``GENIUSv2 Discrete Facilities/Materials Modeling of International
-        Fuel Cycle Robustness. ''
-         \textbf{Transactions of the American Nuclear Society Winter Conference.}
-        Washington D.C. November 2009.
-        % [paper][talk]
-      \item \textbf{Huff, K.}, Wilson, P.P.H., Oliver, K. ``GENIUS Version 2: Modelling the Worldwide Nuclear Fuel Cycle.''
-        (poster)  \textbf{eHub Conference.} University of Wisconsin -
-        Madison. November 2009.
-        % [poster]
+         \item \bibentry{fairhurst_agosta_hydrogen_2020-1}
+         \item \bibentry{turkmen_single_2020}
+         \item \bibentry{fairhurst_agosta_hydrogen_2020}
+         \item \bibentry{dotson_optimal_2020}
+         \item \bibentry{dotson_echo_2020}
+         \item \bibentry{rykhlevskii_impact_2019}
+         \item \bibentry{park_safety_2019}
+         \item \bibentry{hague_comparison_2019}
+         \item \bibentry{chee_simulation_2019}
+         \item \bibentry{chee_demonstration_2019}
+         \item \bibentry{chaube_dynamic_2019}
+         \item \bibentry{westphal_signatures_2018}
+         \item \bibentry{kissinger_simulating_2018}
+         \item \bibentry{kamuda_comparison_2018}
+         \item \bibentry{chee_validation_2018}
+         \item \bibentry{chee_numerical_2018}
+         \item \bibentry{chaube_dynamic_2018}
+         \item \bibentry{bae_impact_2018}
+         \item \bibentry{rykhlevskii_online_2017}
+         \item \bibentry{rykhlevskii_full-core_2017}
+         \item \bibentry{ridley_introduction_2017}
+         \item \bibentry{bae_synergistic_2017}
+         \item \bibentry{scopatz_modernizing_2015}
+         \item \bibentry{huff_extensions_2014}
+         \item \bibentry{bates_pyne_2014}
+         \item \bibentry{huff_dynamic_2013}
+         \item \bibentry{scopatz_pyne:_2012}
+         \item \bibentry{huff_numerical_2012}
+         \item \bibentry{huff_key_2012}
+         \item \bibentry{gidden_once-through_2012}
+         \item \bibentry{huff_rapid_2011}
+         \item \bibentry{huff_open_2011}
+         \item \bibentry{huff_cyclus_2011}
+         \item \bibentry{huff_mox_2010}
+         \item \bibentry{huff_geniusv2_2009}
+         \item \bibentry{huff_genius_2009}
+         \item \bibentry{elmore_geniusv2_2009}
     \end{bibenum}
 
     %__________________________________________________________________________________________________________________
     % Technical Reports
     \section{\mysidestyle Technical\\Reports}
     \begin{bibenum}
-      \item Lindsay, A., \textbf{Huff, K.}. ``Coupled Multi-Physics of Advanced
-              Molten Salt Nuclear Reactors.'' \textbf{National Center for
-              Supercomputing Applications,} Blue Waters Annual Report,
-              \url{https://bluewaters.ncsa.illinois.edu/liferay-content/document-library/BW_AR_2017.pdf}
-              2017.
-      \item Chee, G.J., Bae, J.W., \textbf{Huff, K.}, ``Numerical Experiments
-              For Verifying Demand Driven Deployment Algorithms.''
-              \textbf{Advanced Reactors and Fuel Cycles Report Series}, Nuclear Plasma and Radiological Engineering, University of Illinois.  Report
-              UIUC-ARFC-2018-01,
-              \url{https://arfc.npre.illinois.edu/research/reports/uiuc-arfc-2018-01.pdf}
-              Apr.2018.
-      \item Bae, J.W. \textbf{Huff, K.}, ``Non-algorithmic Capability Gaps for
-              Cyclus and Cycamore Transition Analyses,'' \textbf{Advanced
-              Reactors and Fuel Cycles Report Series}, Nuclear Plasma and
-              Radiological Engineering, University of Illinois.  Report
-              UIUC-ARFC-2017-02,
-              \url{https://arfc.npre.illinois.edu/research/reports/uiuc-arfc-2017-02.pdf}
-              Nov. 2017.
-      \item Ridley, G., Lindsay, A., Turk, M., \textbf{Huff, K.}, ``Multiphysics
-              Analysis of Molten Salt Reactor Transients,'' \textbf{Advanced
-              Reactors and Fuel Cycles Report Series}, Nuclear Plasma and
-              Radiological Engineering, University of Illinois.  Report
-              UIUC-ARFC-2017-01,
-              \url{https://arfc.npre.illinois.edu/research/reports/uiuc-arfc-2017-01.pdf}
-              Aug. 2017.
-      \item C. Andreades, A. T. Cisneros, J.K. Choi, A.Y.K. Chong, D. L.
-              Krumwiede, L.R. Huddar, \textbf{K. Huff}, M. R. Laufer, M.O.
-              Munk, R.O.  Scarlat, J. Seifried, N. Zweibaum, E. Greenspan, and
-              P. F. Peterson, ``Technical Description of the ‘Mark 1’
-              Pebble-Bed Fluoride-Salt-Cooled High-Temperature Reactor (PB-FHR)
-              Power Plant,'' \textbf{U.C. Berkeley Nuclear Engineering}, Report
-              UCBTH-14-002, 2014.
-      \item \textbf{Huff, K.}, Nutt, W.M. ``FY12 Sensitivity Studies Using the UFD Clay Generic Disposal System Model.''
-        \textbf{Argonne National Laboratory}. July 2012.
-      \item \textbf{Huff, K.}, Bauer, T.H. ``Benchmarking a New Closed-Form Thermal Analysis Technique Against a Traditional
-        Lumped Parameter, Finite-Difference Method'' \textbf{Argonne National Laboratory}. (FCRD-UFD-2012-000142). July 2012.
-      \item \textbf{Huff, K.}, Dixon, B., Braase, L. ``Next Generation Fuel Cycle Simulator Functions and Requirements Document.''
-        \textbf{Idaho National Laboratory} (FCRD-SYSA-2010-000110). July 2010.
-        % [paper]
-      \item \textbf{Huff, K.} ``Digital Filtering Application to the Lead Slowing Down
-        Spectrometer.'' Los Alamos Neutron Science Center. August 2004.  %[paper][talk][award]
-        (\textbf{awarded los alamos distinguished student award.})
-      \item \textbf{Huff, K.} ``Excess Single Event Effects in the Second Chip of a Series.''
-        Los Alamos Neutron Science Center. August 2003.
-        %[paper][talk]
+       \item \bibentry{lee_milestone_2020}
+       \item \bibentry{sabharwall_micronuclear_2019}
+       \item \bibentry{chaube_dynamic_2019}
+       \item \bibentry{huff_identifying_2019}
+       \item \bibentry{chee_transition_2019}
+       \item \bibentry{huff_demand_2019}
+       \item \bibentry{rykhlevskii_milestone_2019}
+       \item \bibentry{bae_numerical_2018}
+       \item \bibentry{heald_investigation_2018}
+       \item \bibentry{bae_non-algorithmic_2017}
+       \item \bibentry{huff_coupled_2017}
+       \item \bibentry{ridley_multiphysics_2017}
+       \item \bibentry{lindsay_advanced_2016}
+       \item \bibentry{djokic_application_2015}
+       \item \bibentry{andreades_technical_2014}
+       \item \bibentry{huff_benchmarking_2012}
+       \item \bibentry{huff_fy12_2012}
+       \item \bibentry{huff_next_2010}
+       \item \bibentry{biris_analysis_2008}
+       \item \bibentry{huff_digital_2004}
+       \item \bibentry{huff_excess_2003}
     \end{bibenum}
     %__________________________________________________________________________________________________________________
     % Other Publications
     \section{\mysidestyle Other\\Publications}
     \begin{bibenum}
-      \item \textbf{Huff, K.} An Integrated Used Fuel Disposition and Generic Repository Model for Fuel Cycle Analysis.
-        Ph.D. Dissertation--Nuclear Engineering and Engineering
-        Physics. University of Wisconsin -- Madison.  August 2013.
-      \item \textbf{Huff, K.} ``Celestial Calibrations of the Quiet Telescope.''
-        Undergraduate Honors Thesis. University of Chicago. June 2008.
-        % [paper][talk]
-      \item Biris, O., Gracey, K., \textbf{Huff, K.}, Ng, W.K.
-        ``An Analysis of the Consolidated Fuel Treatment Center Nuclear
-        Reprocessing Initiative.''
-        \textbf{Big Problems Energy Seminar. University of Chicago.} June 2008.
+         \item \bibentry{huff_integrated_2013}
+         \item \bibentry{huff_quiet_2008}
+         \item \bibentry{biris_analysis_2008}
     \end{bibenum}
     %__________________________________________________________________________________________________________________
     % Software Products
     \section{\mysidestyle Software\\Products}
     \begin{bibenum}
-    \item Carlsen, R., Flanagan, R., Gidden, M.,\textbf{Huff, K.,} Littell, J.,
-            McGarry, M., Mouginot, B., Opotowsky, A., Scopatz, A., Skutnik, S.,
-            and Wilson, P.. Cycamore v1.5.0. \textbf{figshare}, Nov 2016.
-            \url{https://dx.doi.org/10.6084/m9.figshare.4312661.v1}.
-    \item \textbf{Huff, K.}. ``PyRK v0.1'' \textbf{figshare.}
-            \url{http://dx.doi.org/10.6084/m9.figshare.1540727}. September 2015.
-    \item Carlsen, R., Flanagan, R., Gidden, M., \textbf{Huff, K.}, McGarry,
-            M., Opotowsky, A., Scopatz, A., Wilson, P., and Xia, J.. Cyclus
-            v1.3.0. \textbf{figshare}, July 2015.
-            \url{http://dx.doi.org/10.6084/m9.figshare.1427429}.
-      \item Bates, C., Biondo, E., Brachem, C., Carlsen, R., Cary, J., Davis, A., Dembia, C., Elfring, M., Flanagan, R., Gidden, M., Haines, T., Howland, J., Huff, B., \textbf{Huff, K.}, Jackson, S., Kiesling, K., Klebenow, M., Kuett, M., Manalo, K., M. McCormick, A. Opotowsky, C., Pavlovsky, R., Rabbani, M., Relson, E., Romano, P., Scopatz, A., Shriwise, P., Slaybaugh, R., Wilson, P., Xia, J., J. Zachman, C., and Zweig, M. ``PyNE v0.5.'' \textbf{github}.  github.com/pyne/pyne/releases/tag/0.5.0. April 2015.
-      \item Carlsen, R., Gidden, M., \textbf{Huff, K.}, Opotowsky, A.,
-      Rakhimov, O., Scopatz, A., and Wilson, P.. Cycamore v1.1.0.
-      \textbf{figshare}, September 2014.
-            \url{http://dx.doi.org/10.6084/m9.figshare.1174604}.
-      \item Carlsen, R., Gidden, M., \textbf{Huff, K.}, Rakhimov, O., and
-              Scopatz, A.. Cyclus v1.1.0. \textbf{figshare}, September 2014.
-              \url{http://dx.doi.org/10.6084/m9.figshare.1174603}.
-      \item Carlsen, R., Gidden, M., \textbf{Huff, K.}, Arrielle C. Opotowsky,
-              Rakhimov, O., Scopatz, A., Zach Welch, and Wilson, P.. Cyclus
-              v1.0.0. \textbf{figshare}, June 2014.
-              \url{http://dx.doi.org/10.6084/m9.figshare.1041745}.
-      \item Carlsen, R., Gidden, M., \textbf{Huff, K.}, Arrielle C. Opotowsky,
-              Rakhimov, O., Scopatz, A., and Wilson, P.. Cycamore v1.0.0.
-              \textbf{figshare}, June 2014.
-              \url{http://dx.doi.org/10.6084/m9.figshare.1041829}.
-    \end{bibenum}
-
+         \item \bibentry{carlsen_cycamore_2014}
+         \item \bibentry{carlsen_cyclus_2014}
+         \item \bibentry{lindsay_arfc/moltres:_2017}
+         \item \bibentry{bae_arfc/transition-scenarios:_2018-1}
+         \item \bibentry{bae_arfc/transition-scenarios:_2018}
+         \item \bibentry{chaube_i2cner:_2018}
+         \item \bibentry{rykhlevskii_arfc/saltproc:_2018}
+         \item \bibentry{chaube_tap_2019}
+         \item \bibentry{chee_arfc/d3ploy:_2019}
+         \item \bibentry{chee_arfc/dcwrapper_2019}
+      \end{bibenum}
+         
+    %__________________________________________________________________________________________________________________
+    % Media
     \section{\mysidestyle Media\\Coverage}
     \begin{bibenum}
-        \item Silver, A. ``Microsoft's Purchase of GitHub Leaves Some Scientists Uneasy.'' \textbf{Nature News} In Focus, 558. June 21, 2018. \url{https://doi.org/doi: 10.1038/d41586-018-05426-0}.
-        \item Coit, H., Holloway, M., Rice, M.,  Mumm, S. ``Professor Kathryn Huff on the Possibilities in NPRE.'' \textbf{NPRE YouTube Channel}. Urbana, IL: Illinois Engineering, March 14, 2018. \url{https://www.youtube.com/watch?v=w9d_QMW1hA4}.
-        \item Bowne-Anderson, H. ``Data Science, Nuclear Engineering and the
-                Open Source (with Katy Huff).'' \textbf{DataFramed Podcast}.
-                March 5, 2018. \\\url{https://www.datacamp.com/community/podcast/data-science-nuclear-engineering}.
-        \item Hacksworth, S. ``Nuclear Engineering Programs with Dr. Kathryn Huff.'' \textbf{YesCollege Podcast}. February 5, 2018. \url{https://yescollege.com/episode/kathryn-huff/}.
-        \item Perkel, J. ``Democratic Databases: Science on GitHub.'' \textbf{Nature News}, Toolbox, 538, no. 7623. October 3, 2016. \url{https://doi.org/10.1038/538127a}.
-        \item Tippmann, S. ``My Digital Toolbox: Nuclear Engineer Katy Huff on Version-Control Systems.'' \textbf{Nature News}, Toolbox: Q\&A, September 29, 2014. \url{https://doi.org/10.1038/nature.2014.16014}.
+        \item \bibentry{tippmann_my_2014}
+        \item \bibentry{lowery_women_2015}
+        \item \bibentry{bohannon_female_2016}
+        \item \bibentry{perkel_democratic_2016}
+        \item \bibentry{schuler_ans_2017}
+        \item \bibentry{bowne-anderson_data_2018}
+        \item \bibentry{hawksworth_nuclear_2018}
+        \item \bibentry{huff_creating_2018}
+        \item \bibentry{larsen_california_2018}
+        \item \bibentry{mumm_npre_2018}
+        \item \bibentry{mumm_professor_2018}
+        \item \bibentry{silver_microsofts_2018}
+        \item \bibentry{timmins_power_2018}
+        \item \bibentry{anghel_krannert_2019}
+        \item \bibentry{hu_someday_2019}
+        \item \bibentry{kugelmass_katy_2019}
+        \item \bibentry{letzter_when_2019}
+        \item \bibentry{bushak_university_2020}
+        \item \bibentry{huff_day_2020}
+        \item \bibentry{robinson_university_2020}
+        \item \bibentry{white_331_2020}
+        \item \bibentry{delbert_tiny_2021}
         \end{bibenum}
     %__________________________________________________________________________________________________________________
     % Invited Talks
     \section{\mysidestyle Invited\\Talks}
-    %\textbf{<++>}, <++>, \emph{<++>}.  \hfill\textbf{<+mo+> <+date+>, <+yy+>}\\
+    %\textbf{}, <++>, \emph{<++>}.  \hfill\textbf{<+mo+> <+date+>, <+yy+>}\\
     %\textbf{<++>}, <++>, \emph{<++>}.  \hfill\textbf{<+mo+> <+date+>, <+yy+>}\\
     \textbf{SIAM CSE 2019}, Spokane, WA, \emph{Invited Minisymposium Speaker}\hfill\textbf{Feb 25, 2019}\\
       \textbf{SciFOO}, Google X, \emph{Invited Camper}.  \hfill\textbf{Jun 23, 2018}\\
