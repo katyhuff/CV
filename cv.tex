@@ -24,7 +24,9 @@
 \def\FormatName#1{%
   \IfSubStr{#1}{Huff}{\textbf{#1}}{#1}%
 }
-
+\def\FormatDotson#1{%
+  \IfSubStr{#1}{Dotson}{\textbf{#1}}{#1}%
+}
 
 %______________________________________________________________________________________________________________________
 \begin{document}
@@ -226,6 +228,11 @@
     %\section{\mysidestyle Refereed\\Journal\\Publications} % also, vspace below
       \begin{bibenum}
       %\item \bibentry{<++>}
+      \item \bibentry{dotson_demonstration_2025}
+      \item \bibentry{seifert_accuracy_2025}
+      \item \bibentry{bachmann_effects_2025}
+      \item \bibentry{seifert_delayed_2025}
+      \item \bibentry{kennedy_national_2024}
       \item \bibentry{thiolliere_impact_2022}
       \item \bibentry{turkmen_machine_2021}
       \item \bibentry{chaube_role_2021}
@@ -243,7 +250,7 @@
       \item \bibentry{rykhlevskii_modeling_2019}
       \item \bibentry{lindsay_introduction_2018}
       \item \bibentry{smith_journal_2018}
-      \item \bibentry{lindsay_moltres_2018}
+      \item \bibentry{lindsay_moltres:_2018}
       \item \bibentry{allen_engineering_2017}
       \item \bibentry{huff_rapid_2017}
       \item \bibentry{andreades_design_2016}
@@ -257,14 +264,15 @@
       %\end{bibenum}
     \section{\mysidestyle Refereed\\Conference\\Proceedings}
     \begin{bibenum}
-    %\item \bibentry{<++>}
+    \item \bibentry{seifert_computationally_2025}
+    \item \bibentry{park_hybrid_2025}
     \item \bibentry{petrovic_preliminary_2021}
     \item \bibentry{betzler_impacts_2019}
     \item \bibentry{chee_demonstration_2019}
     \item \bibentry{flanagan_methods_2019}
     \item \bibentry{park_safety_2019}
     \item \bibentry{rykhlevskii_fuel_2019}
-    \item \bibentry{westphal_pyre_2018}
+    \item \bibentry{westphal_pyre:_2018}
     \item \bibentry{smith_introducing_2017}
     \item \bibentry{smith_journal_2017}
     \item \bibentry{huff_current_2017}
@@ -277,7 +285,7 @@
     \item \bibentry{huff_cyclus_2013}
     \item \bibentry{gidden_agent-based_2013}
     \item \bibentry{huff_hydrologic_2013}
-    \item \bibentry{huff_cyclus_2011}
+    \item \bibentry{huff_cyclus:_2011}
     \item \bibentry{oliver_studying_2009}
     \item \bibentry{mujica_solid-liquid-like_2008}
     \item \bibentry{rochman_first_2005}
@@ -292,12 +300,13 @@
     % Conference Publications
     \section{\mysidestyle Refereed\\Conference\\Abstracts}
     \begin{bibenum}
+         \item \bibentry{bachmann_comparing_2021}
          \item \bibentry{park_multiphysics_2021}
          \item \bibentry{bachmann_enriched_2021}
-         \item \bibentry{fairhurst_agosta_hydrogen_2020-1}
+         \item \bibentry{fairhurst_agosta_hydrogen_2020}
          \item \bibentry{dotson_echo_2020}
          \item \bibentry{turkmen_single_2020}
-         \item \bibentry{dotson_optimal_2020-1}
+         \item \bibentry{dotson_optimal_2020}
          \item \bibentry{fairhurst_agosta_hydrogen_2020}
          \item \bibentry{rykhlevskii_impact_2019}
          \item \bibentry{park_safety_2019}
@@ -305,7 +314,6 @@
          \item \bibentry{chee_demonstration_2019}
          \item \bibentry{chaube_dynamic_2019}
          \item \bibentry{westphal_signatures_2018}
-         \item \bibentry{kissinger_simulating_2018}
          \item \bibentry{kamuda_comparison_2018}
          \item \bibentry{chee_validation_2018}
          \item \bibentry{chee_numerical_2018}
@@ -325,11 +333,20 @@
          \item \bibentry{gidden_once-through_2012}
          \item \bibentry{huff_rapid_2011}
          \item \bibentry{huff_open_2011}
-         \item \bibentry{huff_cyclus_2011}
          \item \bibentry{huff_mox_2010}
          \item \bibentry{huff_geniusv2_2009}
          \item \bibentry{huff_genius_2009}
          \item \bibentry{elmore_geniusv2_2009}
+    \end{bibenum}
+
+    %__________________________________________________________________________________________________________________
+    % Editorials
+    \section{\mysidestyle National\\Editorial\\Articles}
+    \begin{bibenum}
+       \item \bibentry{huff_taking_2025}
+       \item \bibentry{huff_killing_2025}
+       \item \bibentry{huff_what_2024}
+       \item \bibentry{huff_investing_2022}
     \end{bibenum}
 
     %__________________________________________________________________________________________________________________
@@ -388,8 +405,8 @@
          \item \bibentry{anderson_cyclus_2024}
          \item \bibentry{park_results_2021}
          \item \bibentry{chaube_tap_2019}
-         \item \bibentry{chee_arfc/d3ploy:_2019}
-         \item \bibentry{chee_arfc/dcwrapper_2019}
+         \item \bibentry{chee_arfcd3ploy_2019}
+         \item \bibentry{chee_arfcdcwrapper_2019}
          \item \bibentry{bae_arfc/transition-scenarios:_2018-1}
          \item \bibentry{bae_arfc/transition-scenarios:_2018}
          \item \bibentry{chaube_i2cner:_2018}
@@ -448,7 +465,7 @@
         \item \bibentry{white_331_2020}
         \item \bibentry{bushak_university_2020}
         \item \bibentry{adams_atomic_2020}
-        \item \bibentry{ans_day_2020}
+        \item \bibentry{huff_day_2020}
         \item \bibentry{robinson_university_2020}
         \item \bibentry{bushak_university_2020}
         \item \bibentry{anghel_krannert_2019}
