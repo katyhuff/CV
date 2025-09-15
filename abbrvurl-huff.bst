@@ -1,116 +1,3 @@
-
-FUNCTION {bold.if.ridley}
-    { duplicate$ purify$ 
-    "G. Ridley"
-    purify$ = { 
-    "\textbf{"
-    swap$ * "}" * } 'skip$ if$
-}
-
-FUNCTION {bold.if.westphal}
-    { duplicate$ purify$ 
-    "G. Westphal"
-    purify$ = { 
-    "\textbf{"
-    swap$ * "}" * } 'skip$ if$
-}
-
-FUNCTION {bold.if.sunmyung}
-    { duplicate$ purify$ 
-    "S. M. Park"
-    purify$ = { 
-    "\textbf{"
-    swap$ * "}" * } 'skip$ if$
-}
-
-FUNCTION {bold.if.gyutae}
-    { duplicate$ purify$ 
-    "G. Park"
-    purify$ = { 
-    "\textbf{"
-    swap$ * "}" * } 'skip$ if$
-}
-
-FUNCTION {bold.if.fairhurst}
-    { duplicate$ purify$ 
-    "R. Fairhurst"
-    purify$ = { 
-    "\textbf{"
-    swap$ * "}" * } 'skip$ if$
-}
-FUNCTION {bold.if.chaube}
-    { duplicate$ purify$ 
-    "A. Chaube"
-    purify$ = { 
-    "\textbf{"
-    swap$ * "}" * } 'skip$ if$
-}
-
-FUNCTION {bold.if.bachmann}
-    { duplicate$ purify$ 
-    "A. M. Bachmann"
-    purify$ = { 
-    "\textbf{"
-    swap$ * "}" * } 'skip$ if$
-}
-
-FUNCTION {bold.if.dotson}
-    { duplicate$ purify$ 
-    "S. G. Dotson"
-    purify$ = { 
-    "\textbf{"
-    swap$ * "}" * } 'skip$ if$
-}
-
-FUNCTION {bold.if.chee}
-    { duplicate$ purify$ 
-    "G. J. Y. Chee"
-    purify$ = { 
-    "\textbf{"
-    swap$ * "}" * } 'skip$ if$
-}
-
-FUNCTION {bold.if.rykhlevskii}
-    { duplicate$ purify$ 
-    "A. Rykhlevskii"
-    purify$ = { 
-    "\textbf{"
-    swap$ * "}" * } 'skip$ if$
-}
-
-FUNCTION {bold.if.seifert}
-    { duplicate$ purify$ 
-    "L. Seifert"
-    purify$ = { 
-    "\textbf{"
-    swap$ * "}" * } 'skip$ if$
-}
-
-FUNCTION {bold.if.richter}
-    { duplicate$ purify$ 
-    "Z. Richter"
-    purify$ = { 
-    "\textbf{"
-    swap$ * "}" * } 'skip$ if$
-}
-
-FUNCTION {bold.if.bae}
-    { duplicate$ purify$ 
-    "J. W. Bae"
-    purify$ = { 
-    "\textbf{"
-    swap$ * "}" * } 'skip$ if$
-}
-
-FUNCTION {bold.if.kamuda}
-    { duplicate$ purify$ 
-    "M. Kamuda"
-    purify$ = { 
-    "\textbf{"
-    swap$ * "}" * } 'skip$ if$
-}
-
-
 %%% Modification of BibTeX style file /usr/local/texlive/2019/texmf-dist/bibtex/bst/base/abbrv.bst
 %%% ... by urlbst, version 0.8 (marked with "% urlbst")
 %%% See <http://purl.org/nxg/dist/urlbst>
@@ -471,21 +358,7 @@ FUNCTION {format.names}
   s num.names$ 'numnames :=
   numnames 'namesleft :=
     { namesleft #0 > }
-     { s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ 
-             bold.if.gyutae
-             bold.if.sunmyung
-             bold.if.westphal
-             bold.if.bachmann
-             bold.if.rykhlevskii
-             bold.if.dotson
-             bold.if.kamuda
-             bold.if.bae
-             bold.if.chee
-             bold.if.chaube
-             bold.if.fairhurst
-             bold.if.richter
-             bold.if.seifert
-             't :=
+    { "\FormatName{" s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ * "}" * 't :=
       nameptr #1 >
         { namesleft #1 >
             { ", " * t * }
@@ -772,7 +645,7 @@ FUNCTION {format.crossref.editor}
     { pop$ " et~al." * }
     { #2 <
         'skip$
-        { editor #2 "{f. }{vv }{ll}{ jj}" format.name$ "others" =
+        { editor #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
             { " et~al." * }
             { " and " * editor #2 "{vv~}{ll}" format.name$ * }
           if$
