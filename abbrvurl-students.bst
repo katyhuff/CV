@@ -78,6 +78,14 @@ FUNCTION {bold.if.rykhlevskii}
     swap$ * "}" * } 'skip$ if$
 }
 
+FUNCTION {bold.if.yardas}
+    { duplicate$ purify$ 
+    "O. Yardas"
+    purify$ = { 
+    "\textbf{"
+    swap$ * "}" * } 'skip$ if$
+}
+
 FUNCTION {bold.if.seifert}
     { duplicate$ purify$ 
     "L. Seifert"
@@ -485,6 +493,7 @@ FUNCTION {format.names}
              bold.if.fairhurst
              bold.if.richter
              bold.if.seifert
+             bold.if.yardas
              't :=
       nameptr #1 >
         { namesleft #1 >
